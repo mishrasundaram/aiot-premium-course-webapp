@@ -3794,3 +3794,40 @@ button {
   border-color: rgba(21, 232, 255, 0.35) !important;
   background: rgba(21, 232, 255, 0.09) !important;
 }
+
+/* =========================================================
+   SVG Flag Language Toggle
+   Works on all PCs; no emoji fallback issue.
+========================================================= */
+
+.nav-links .lang-toggle-final {
+  min-width: 82px !important;
+  height: 46px !important;
+  padding: 0 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+}
+
+.lang-flag-img {
+  width: 22px !important;
+  height: 16px !important;
+  display: block !important;
+  object-fit: cover !important;
+  border-radius: 3px !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.15);
+}
+
+.nav-links .lang-toggle-final:hover {
+  border-color: rgba(21, 232, 255, 0.35) !important;
+  background: rgba(21, 232, 255, 0.09) !important;
+}
