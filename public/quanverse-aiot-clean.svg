@@ -1,0 +1,23 @@
+<svg width="520" height="96" viewBox="0 0 520 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(2 14)">
+    <path d="M14 0H44C51.7 0 58 6.3 58 14V27H35C30 27 26 31 26 36V48H14C6.3 48 0 41.7 0 34V14C0 6.3 6.3 0 14 0Z" fill="#2563EB"/>
+    <path d="M0 54H25C30 54 34 50 34 45V34H47C54.7 34 61 40.3 61 48V66C61 73.7 54.7 80 47 80H14C6.3 80 0 73.7 0 66V54Z" fill="#F59E0B"/>
+    <path d="M43 5L58 16L33 31V18C33 12.5 36.9 7.7 43 5Z" fill="#1D4ED8"/>
+    <path d="M18 66L34 54V70C34 75 30.5 79 26 80L18 80L3 69L18 66Z" fill="#D97706"/>
+  </g>
+
+  <g transform="translate(82 19)">
+    <text x="0" y="28" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="850" fill="#F8FBFF" letter-spacing="-0.8">QuanVerse</text>
+    <text x="0" y="53" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="950" fill="#18F0FF" letter-spacing="3.3">AIOT INTELLIGENCE MASTERY</text>
+  </g>
+
+  <g transform="translate(314 18)">
+    <rect width="196" height="60" rx="30" fill="#0C1A2A" stroke="#16415C"/>
+    <text x="19" y="37" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="800" fill="#9FB0C7">A Community by</text>
+    <g transform="translate(123 18)">
+      <path d="M8 0H25C29.4 0 33 3.6 33 8V15H20C17.2 15 15 17.2 15 20V27H8C3.6 27 0 23.4 0 19V8C0 3.6 3.6 0 8 0Z" fill="#2563EB"/>
+      <path d="M0 31H14C16.8 31 19 28.8 19 26V19H27C31.4 19 35 22.6 35 27V39C35 43.4 31.4 47 27 47H8C3.6 47 0 43.4 0 39V31Z" fill="#F59E0B"/>
+    </g>
+    <text x="164" y="37" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#F8FBFF">QS</text>
+  </g>
+</svg>
