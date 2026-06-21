@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState } from "react";
 
 type Lang = "en" | "vi";
@@ -207,7 +209,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav-shell">
           <a href="#top" className="real-logo-final" aria-label="QuanVerse - A Community by QuanSkill">
-            <img src="/quanskill-final.png" alt="QuanVerse - A Community by QuanSkill" />
+            <Image src="/quanskill-final-hd.png" alt="QuanVerse - A Community by QuanSkill" width={2958} height={416} priority quality={100} unoptimized className="real-logo-img" />
           </a>
 
           <nav className="nav-links">

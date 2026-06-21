@@ -3595,3 +3595,52 @@ button {
     display: none !important;
   }
 }
+
+/* =========================================================
+   HD LOGO SHARPNESS FIX
+========================================================= */
+
+.real-logo-final {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+  flex: 0 0 auto !important;
+  width: 480px !important;           /* slightly smaller = crisper */
+  max-width: min(480px, 52vw) !important;
+}
+
+.real-logo-img,
+.real-logo-final img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  image-rendering: auto !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* keep header balanced */
+.nav-shell {
+  min-height: 82px !important;
+}
+
+@media (max-width: 1080px) {
+  .real-logo-final {
+    width: 410px !important;
+    max-width: 56vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .real-logo-final {
+    width: 250px !important;
+    max-width: 66vw !important;
+  }
+}
