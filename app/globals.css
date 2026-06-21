@@ -1722,3 +1722,93 @@ button {
     line-height: 1.13 !important;
   }
 }
+
+/* =========================================================
+   RESTORE ORIGINAL LOGO LOOK
+   Reverts the broken cleaned/masked logo changes.
+========================================================= */
+
+.site-header {
+  background: #070d18 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.logo-image-zone {
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+}
+
+.brand-image {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  width: 515px !important;
+  max-width: min(515px, 52vw) !important;
+  overflow: visible !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* completely remove all previous mask/overlay tricks */
+.brand-image::after,
+.brand-image::before {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.brand-image img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+}
+
+/* hide old CSS-generated logo pieces if they exist */
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* keep header balanced */
+.nav-shell {
+  min-height: 82px !important;
+}
+
+.nav-links {
+  gap: 24px !important;
+}
+
+/* keep the title clean and not oversized */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(3rem, 4.5vw, 4.45rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.024em !important;
+  max-width: 660px !important;
+}
+
+@media (max-width: 1080px) {
+  .brand-image {
+    width: 430px !important;
+    max-width: 58vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-image {
+    width: 255px !important;
+    max-width: 66vw !important;
+  }
+}
