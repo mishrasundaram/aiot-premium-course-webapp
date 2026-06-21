@@ -3831,3 +3831,157 @@ button {
   border-color: rgba(21, 232, 255, 0.35) !important;
   background: rgba(21, 232, 255, 0.09) !important;
 }
+
+/* =========================================================
+   Empty Space Fix
+   Adds premium right-side context panels to section headers.
+   Does NOT touch logo.
+========================================================= */
+
+/* Make section headers use the full horizontal space */
+.studio-section .section-head,
+#curriculum .section-head,
+#projects .section-head,
+#faq .section-head {
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.82fr) minmax(300px, 0.58fr) !important;
+  gap: clamp(32px, 5vw, 76px) !important;
+  align-items: end !important;
+}
+
+/* Keep text block controlled */
+.studio-section .section-head > span,
+.studio-section .section-head > h2,
+.studio-section .section-head > p,
+#curriculum .section-head > span,
+#curriculum .section-head > h2,
+#curriculum .section-head > p,
+#projects .section-head > span,
+#projects .section-head > h2,
+#projects .section-head > p,
+#faq .section-head > span,
+#faq .section-head > h2,
+#faq .section-head > p {
+  grid-column: 1 !important;
+}
+
+/* Smaller, cleaner section titles */
+.studio-section .section-head h2,
+#curriculum .section-head h2,
+#projects .section-head h2,
+#faq .section-head h2 {
+  font-size: clamp(2.65rem, 4.1vw, 4.75rem) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.028em !important;
+  max-width: 760px !important;
+}
+
+/* Right-side premium cards */
+.studio-section .section-head::after,
+#curriculum .section-head::after,
+#projects .section-head::after,
+#faq .section-head::after {
+  grid-column: 2 !important;
+  content: "";
+  min-height: 230px;
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background:
+    radial-gradient(circle at 18% 18%, rgba(21, 232, 255, 0.12), transparent 32%),
+    radial-gradient(circle at 80% 80%, rgba(18, 244, 168, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.03));
+  box-shadow: 0 24px 70px rgba(0,0,0,0.24);
+  padding: 26px;
+  color: #eaf6ff;
+  white-space: pre-line;
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+/* Different content for each right-side card */
+.studio-section .section-head::after {
+  content: "EDGE AI STUDIO\A\A• On-device intelligence\A• Low-latency inference\A• Sensor-to-model thinking\A• Market-ready smart systems";
+}
+
+#curriculum .section-head::after {
+  content: "EDGE-TO-CLOUD PATHWAY\A\A• IoT architecture\A• MQTT + data engineering\A• ML/DL for sensor data\A• TinyML deployment readiness";
+}
+
+#projects .section-head::after {
+  content: "PORTFOLIO SIGNAL\A\A• Predictive maintenance\A• Anomaly detection\A• Smart monitoring dashboards\A• Edge AI deployment reports";
+}
+
+#faq .section-head::after {
+  content: "LEARNER FIT\A\A• IoT beginners\A• AI/ML learners\A• Engineering students\A• Smart infrastructure builders";
+}
+
+/* Better vertical rhythm */
+.section {
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+}
+
+.section-head {
+  margin-bottom: 30px !important;
+}
+
+/* Bring cards closer so sections feel less empty */
+.studio-grid,
+.project-grid,
+.faq-grid,
+.module-list {
+  margin-top: 0 !important;
+}
+
+/* Make cards slightly fuller and more premium */
+.studio-grid article,
+.project-grid article,
+.faq-grid article {
+  min-height: 190px;
+}
+
+.module-row {
+  min-height: 120px;
+}
+
+/* Mobile/tablet: stack normally */
+@media (max-width: 980px) {
+  .studio-section .section-head,
+  #curriculum .section-head,
+  #projects .section-head,
+  #faq .section-head {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .studio-section .section-head::after,
+  #curriculum .section-head::after,
+  #projects .section-head::after,
+  #faq .section-head::after {
+    grid-column: 1 !important;
+    min-height: auto;
+    padding: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+  .studio-section .section-head h2,
+  #curriculum .section-head h2,
+  #projects .section-head h2,
+  #faq .section-head h2 {
+    font-size: clamp(2.25rem, 10vw, 3.4rem) !important;
+  }
+
+  .section {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .studio-section .section-head::after,
+  #curriculum .section-head::after,
+  #projects .section-head::after,
+  #faq .section-head::after {
+    font-size: 0.92rem;
+  }
+}
