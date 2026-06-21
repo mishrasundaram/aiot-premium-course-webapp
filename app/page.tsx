@@ -217,7 +217,16 @@ export default function Home() {
             <a href="#curriculum">{t.nav[1]}</a>
             <a href="#projects">{t.nav[2]}</a>
             <a href="#faq">{t.nav[3]}</a>
-            <button onClick={() => setLang(lang === "en" ? "vi" : "en")}>{t.lang}</button>
+            <button
+              className="lang-toggle-final"
+              onClick={() => setLang(lang === "en" ? "vi" : "en")}
+              aria-label="Toggle language"
+            >
+              <span className="lang-flag" aria-hidden="true">
+                {lang === "en" ? "🇻🇳" : "🇬🇧"}
+              </span>
+              <span>{t.lang}</span>
+            </button>
           </nav>
         </div>
       </header>
