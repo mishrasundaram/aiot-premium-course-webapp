@@ -3985,3 +3985,159 @@ button {
     font-size: 0.92rem;
   }
 }
+
+/* =========================================================
+   CLEAN EMPTY-SPACE FIX
+   Replaces the bad floating right-side boxes with a clean
+   editorial 2-column section header layout.
+========================================================= */
+
+/* 1) Kill the previous floating filler cards */
+.studio-section .section-head::after,
+#curriculum .section-head::after,
+#projects .section-head::after,
+#faq .section-head::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* 2) Clean balanced 2-column section header */
+.studio-section .section-head,
+#curriculum .section-head,
+#projects .section-head,
+#faq .section-head {
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.72fr) !important;
+  grid-template-areas:
+    "eyebrow meta"
+    "title   meta" !important;
+  column-gap: clamp(30px, 5vw, 72px) !important;
+  row-gap: 12px !important;
+  align-items: start !important;
+  margin-bottom: 34px !important;
+}
+
+/* Left column */
+.studio-section .section-head > span,
+#curriculum .section-head > span,
+#projects .section-head > span,
+#faq .section-head > span {
+  grid-area: eyebrow !important;
+}
+
+.studio-section .section-head > h2,
+#curriculum .section-head > h2,
+#projects .section-head > h2,
+#faq .section-head > h2 {
+  grid-area: title !important;
+  max-width: 760px !important;
+  font-size: clamp(2.6rem, 4vw, 4.45rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.03em !important;
+  margin: 0 !important;
+}
+
+/* Right column: use the real paragraph as the filler */
+.studio-section .section-head > p,
+#curriculum .section-head > p,
+#projects .section-head > p,
+#faq .section-head > p {
+  grid-area: meta !important;
+  align-self: center !important;
+  margin: 0 !important;
+  max-width: 420px !important;
+  padding: 22px 24px !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.025)),
+    rgba(9, 18, 32, 0.42) !important;
+  box-shadow:
+    0 18px 48px rgba(0,0,0,0.20),
+    inset 0 1px 0 rgba(255,255,255,0.05) !important;
+  color: rgba(227, 235, 248, 0.82) !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+}
+
+/* 3) Tighten top/bottom rhythm */
+.section {
+  padding-top: 54px !important;
+  padding-bottom: 54px !important;
+}
+
+.section-head + .studio-grid,
+.section-head + .module-list,
+.section-head + .project-grid,
+.section-head + .faq-grid {
+  margin-top: 6px !important;
+}
+
+/* 4) Let cards breathe without giant gaps */
+.studio-grid,
+.project-grid,
+.faq-grid {
+  gap: 16px !important;
+}
+
+.module-list {
+  gap: 12px !important;
+}
+
+.studio-grid article,
+.project-grid article,
+.faq-grid article {
+  min-height: 172px !important;
+}
+
+/* 5) Curriculum rows slightly tighter */
+.module-row {
+  min-height: auto !important;
+  padding: 18px 18px !important;
+}
+
+/* 6) Mobile / tablet */
+@media (max-width: 980px) {
+  .studio-section .section-head,
+  #curriculum .section-head,
+  #projects .section-head,
+  #faq .section-head {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "meta" !important;
+    row-gap: 18px !important;
+  }
+
+  .studio-section .section-head > h2,
+  #curriculum .section-head > h2,
+  #projects .section-head > h2,
+  #faq .section-head > h2 {
+    max-width: 100% !important;
+  }
+
+  .studio-section .section-head > p,
+  #curriculum .section-head > p,
+  #projects .section-head > p,
+  #faq .section-head > p {
+    max-width: 100% !important;
+    padding: 18px 20px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .studio-section .section-head > h2,
+  #curriculum .section-head > h2,
+  #projects .section-head > h2,
+  #faq .section-head > h2 {
+    font-size: clamp(2.1rem, 9vw, 3.2rem) !important;
+    line-height: 1.08 !important;
+  }
+
+  .section {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+}
