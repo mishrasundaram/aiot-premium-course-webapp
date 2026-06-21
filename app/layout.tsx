@@ -2,25 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AIoT Professional Program | QuanVerse AIoT Mastery",
+  title: "QuanVerse AIoT Mastery",
   description:
-    "A premium AIoT professional program. Learn IoT architecture, sensor data engineering, MQTT, MongoDB, machine learning, deep learning, Edge AI, TinyML, and portfolio-ready smart systems.",
-  keywords: [
-    "AIoT course",
-    "Artificial Intelligence of Things",
-    "Edge AI",
-    "TinyML",
-    "IoT data engineering",
-    "MQTT",
-    "MongoDB IoT",
-    "predictive maintenance",
-    "anomaly detection",
-    "smart systems"
-  ]
+    "Premium AIoT learning experience covering IoT architecture, sensor data engineering, machine learning, Edge AI, TinyML, and intelligent connected systems."
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
