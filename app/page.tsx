@@ -206,26 +206,26 @@ export default function Home() {
 
       <header className="site-header">
         <div className="container nav-shell">
-          <div className="qv-original-lockup">
-            <a href="#top" className="qv-original-brand" aria-label="QuanVerse AIoT Mastery">
-              <span className="qv-original-mark" aria-hidden="true">
-                <span className="mark-blue"></span>
-                <span className="mark-gold"></span>
-                <span className="mark-cut cut-one"></span>
-                <span className="mark-cut cut-two"></span>
+          <div className="brand-ref-lockup">
+            <a href="#top" className="brand-ref-main" aria-label="QuanVerse">
+              <span className="brand-ref-icon" aria-hidden="true">
+                <span className="brand-ref-purple"></span>
+                <span className="brand-ref-orange"></span>
+                <span className="brand-ref-cut brand-ref-cut-one"></span>
+                <span className="brand-ref-cut brand-ref-cut-two"></span>
               </span>
 
-              <span className="qv-original-text">
+              <span className="brand-ref-text">
                 <strong>QuanVerse</strong>
-                <small>AIOT MASTERY</small>
+                <small>CYBERSECURITY MASTERY</small>
               </span>
             </a>
 
-            <div className="qv-original-community">
+            <div className="brand-ref-community" aria-label="A Community by QuanSkill">
               <span>A Community by</span>
-              <span className="qs-original-mark" aria-hidden="true">
-                <span></span>
-                <span></span>
+              <span className="brand-ref-miniicon" aria-hidden="true">
+                <span className="mini-purple"></span>
+                <span className="mini-orange"></span>
               </span>
               <strong>QuanSkill</strong>
             </div>

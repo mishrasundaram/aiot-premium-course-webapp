@@ -2822,3 +2822,264 @@ button {
     display: none !important;
   }
 }
+
+/* =========================================================
+   FINAL HEADER LOGO — MATCH REFERENCE
+========================================================= */
+
+/* Header background like reference */
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 91, 99, 0.22), transparent 36%),
+    linear-gradient(90deg, #071d25 0%, #050c14 46%, #040712 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* Hide all previous logo attempts */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-original-lockup,
+.qv-original-brand,
+.qv-original-mark,
+.qv-original-text,
+.qv-original-community,
+.qv-lockup-link,
+.qv-lockup-link img,
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* Main lockup */
+.brand-ref-lockup {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-width: 0;
+}
+
+.brand-ref-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Icon */
+.brand-ref-icon {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  flex: 0 0 38px;
+}
+
+.brand-ref-purple,
+.brand-ref-orange {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 7px;
+}
+
+.brand-ref-purple {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #b61cff 0%, #8c1fff 45%, #5b26ff 100%);
+  border-bottom-right-radius: 14px;
+}
+
+.brand-ref-orange {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffbf34 0%, #ffa111 55%, #dd8600 100%);
+  border-top-left-radius: 14px;
+}
+
+.brand-ref-cut {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  background: #06121d;
+}
+
+.brand-ref-cut-one {
+  left: 15px;
+  top: 15px;
+}
+
+.brand-ref-cut-two {
+  left: 23px;
+  top: 23px;
+}
+
+/* Text */
+.brand-ref-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateY(1px);
+}
+
+.brand-ref-text strong {
+  color: #ffffff;
+  font-size: 1.24rem;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+}
+
+.brand-ref-text small {
+  margin-top: 7px;
+  color: #14e8ff;
+  font-size: 0.69rem;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Community pill */
+.brand-ref-community {
+  height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 999px;
+  white-space: nowrap;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.018)),
+    rgba(8, 22, 36, 0.72);
+  border: 1px solid rgba(20,232,255,0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 12px 28px rgba(0,0,0,0.18);
+}
+
+.brand-ref-community > span:first-child {
+  color: #aeb8cc;
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.brand-ref-community strong {
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+/* Mini icon in badge */
+.brand-ref-miniicon {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  flex: 0 0 23px;
+}
+
+.brand-ref-miniicon span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+}
+
+.mini-purple {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #b61cff, #6726ff);
+  border-bottom-right-radius: 9px;
+}
+
+.mini-orange {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffbf34, #ffa111);
+  border-top-left-radius: 9px;
+}
+
+/* Nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d6dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+/* Mobile */
+@media (max-width: 1080px) {
+  .brand-ref-community {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 74px !important;
+  }
+
+  .brand-ref-icon {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+
+  .brand-ref-purple,
+  .brand-ref-orange {
+    width: 23px;
+    height: 23px;
+  }
+
+  .brand-ref-cut-one {
+    left: 13px;
+    top: 13px;
+  }
+
+  .brand-ref-cut-two {
+    left: 20px;
+    top: 20px;
+  }
+
+  .brand-ref-text strong {
+    font-size: 1.05rem;
+  }
+
+  .brand-ref-text small {
+    font-size: 0.57rem;
+    letter-spacing: 0.17em;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
