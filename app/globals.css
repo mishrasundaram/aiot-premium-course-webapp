@@ -4141,3 +4141,305 @@ button {
     padding-bottom: 42px !important;
   }
 }
+
+/* =========================================================
+   FINAL PAGE SPACING CLEANUP
+   Fixes empty vertical spaces while keeping premium layout.
+   DOES NOT TOUCH LOGO.
+========================================================= */
+
+/* Smooth anchor behavior under sticky header */
+html {
+  scroll-padding-top: 92px;
+}
+
+.hero,
+.section,
+.final-section {
+  scroll-margin-top: 92px;
+}
+
+/* Remove previous awkward filler panels */
+.studio-section .section-head::after,
+#curriculum .section-head::after,
+#projects .section-head::after,
+#faq .section-head::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hero: remove excessive empty height */
+.hero {
+  min-height: auto !important;
+  padding-top: 44px !important;
+  padding-bottom: 46px !important;
+  gap: 44px !important;
+  align-items: center !important;
+}
+
+.hero-copy {
+  padding-top: 0 !important;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 4.1vw, 4.15rem) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  margin-top: 18px !important;
+  font-size: clamp(1.08rem, 1.45vw, 1.36rem) !important;
+  line-height: 1.58 !important;
+  max-width: 660px !important;
+}
+
+.hero-note {
+  margin-top: 14px !important;
+  max-width: 650px !important;
+}
+
+.hero-actions {
+  margin-top: 22px !important;
+}
+
+.hero-pills,
+.hero-support {
+  margin-top: 14px !important;
+}
+
+.hero-panel {
+  padding: 26px !important;
+  border-radius: 30px !important;
+}
+
+/* Main sections: tighter rhythm */
+.section {
+  padding-top: 46px !important;
+  padding-bottom: 46px !important;
+}
+
+.studio-section {
+  padding-top: 42px !important;
+}
+
+#curriculum,
+#projects,
+#faq {
+  padding-top: 44px !important;
+  padding-bottom: 44px !important;
+}
+
+/* Clean section header layout */
+.studio-section .section-head,
+#curriculum .section-head,
+#projects .section-head,
+#faq .section-head {
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.58fr) !important;
+  grid-template-areas:
+    "eyebrow meta"
+    "title meta" !important;
+  column-gap: clamp(28px, 4.5vw, 62px) !important;
+  row-gap: 12px !important;
+  align-items: center !important;
+  margin-bottom: 24px !important;
+}
+
+/* Left side */
+.studio-section .section-head > span,
+#curriculum .section-head > span,
+#projects .section-head > span,
+#faq .section-head > span {
+  grid-area: eyebrow !important;
+  margin: 0 !important;
+}
+
+.studio-section .section-head > h2,
+#curriculum .section-head > h2,
+#projects .section-head > h2,
+#faq .section-head > h2 {
+  grid-area: title !important;
+  margin: 0 !important;
+  max-width: 700px !important;
+  font-size: clamp(2.35rem, 3.45vw, 3.85rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.027em !important;
+}
+
+/* Right side uses actual paragraph as compact premium note */
+.studio-section .section-head > p,
+#curriculum .section-head > p,
+#projects .section-head > p,
+#faq .section-head > p {
+  grid-area: meta !important;
+  margin: 0 !important;
+  max-width: 460px !important;
+  padding: 18px 20px !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(255,255,255,0.10) !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.022)),
+    rgba(8, 18, 32, 0.38) !important;
+  color: rgba(226,235,248,0.82) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.72 !important;
+  box-shadow: 0 16px 44px rgba(0,0,0,0.18) !important;
+}
+
+/* FAQ has no paragraph sometimes; prevent awkward empty second column */
+#faq .section-head {
+  grid-template-columns: minmax(0, 0.78fr) minmax(260px, 0.42fr) !important;
+}
+
+/* Cards start closer to headers */
+.section-head + .studio-grid,
+.section-head + .module-list,
+.section-head + .project-grid,
+.section-head + .faq-grid {
+  margin-top: 0 !important;
+}
+
+/* Cards: premium but not huge */
+.studio-grid,
+.project-grid,
+.faq-grid {
+  gap: 14px !important;
+}
+
+.studio-grid article,
+.project-grid article,
+.faq-grid article {
+  min-height: 150px !important;
+  padding: 22px !important;
+  border-radius: 24px !important;
+}
+
+.studio-grid h3,
+.project-grid h3,
+.faq-grid h3 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  line-height: 1.22 !important;
+}
+
+.studio-grid p,
+.project-grid p,
+.faq-grid p {
+  line-height: 1.65 !important;
+}
+
+/* Curriculum rows more compact */
+.module-list {
+  gap: 10px !important;
+}
+
+.module-row {
+  min-height: auto !important;
+  padding: 16px 18px !important;
+  border-radius: 22px !important;
+  grid-template-columns: 64px 1fr 0.34fr !important;
+}
+
+.module-no {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 16px !important;
+}
+
+.module-main h3 {
+  margin-bottom: 6px !important;
+}
+
+.module-main p {
+  line-height: 1.58 !important;
+}
+
+/* Project section bottom gap fix */
+#projects {
+  padding-bottom: 34px !important;
+}
+
+#faq {
+  padding-top: 34px !important;
+}
+
+/* Final CTA closer and cleaner */
+.final-section {
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+  margin-top: 10px !important;
+  margin-bottom: 18px !important;
+}
+
+.final-section h2 {
+  font-size: clamp(2.5rem, 4vw, 4.5rem) !important;
+  line-height: 1.06 !important;
+}
+
+.final-section p {
+  margin-top: 16px !important;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .studio-section .section-head,
+  #curriculum .section-head,
+  #projects .section-head,
+  #faq .section-head {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "eyebrow"
+      "title"
+      "meta" !important;
+    row-gap: 16px !important;
+  }
+
+  .studio-section .section-head > p,
+  #curriculum .section-head > p,
+  #projects .section-head > p,
+  #faq .section-head > p {
+    max-width: 100% !important;
+  }
+
+  .module-row {
+    grid-template-columns: 64px 1fr !important;
+  }
+
+  .module-output {
+    grid-column: 2 !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 34px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 9.5vw, 3.25rem) !important;
+  }
+
+  .section {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .studio-section .section-head > h2,
+  #curriculum .section-head > h2,
+  #projects .section-head > h2,
+  #faq .section-head > h2 {
+    font-size: clamp(2rem, 8.5vw, 3rem) !important;
+  }
+
+  .module-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .module-output {
+    grid-column: auto !important;
+  }
+}
