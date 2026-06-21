@@ -4,332 +4,287 @@ import { useState } from "react";
 
 type Lang = "en" | "vi";
 
-const modules = [
+const weeks = [
   {
     no: "01",
-    label: "Orientation",
-    title: "AIoT Overview & Intelligent Systems",
-    time: "7 lessons • 58 min",
-    copy:
-      "Understand how IoT evolved from connected monitoring into AI-powered decision systems.",
-    topics: [
-      "Evolution of connected and intelligent systems",
-      "AIoT overview",
-      "AIoT vs Traditional IoT vs Pure AI",
-      "Key components and technology enablers",
-      "Use cases across industries"
-    ]
+    title: "AIoT Mindset",
+    subtitle:
+      "How Artificial Intelligence is transforming IoT from connected monitoring into intelligent decision systems.",
+    outcome: "AIoT technology map and smart-systems opportunity brief"
   },
   {
     no: "02",
-    label: "Foundation",
-    title: "IoT Architecture for AIoT",
-    time: "11 lessons • 2 hr 11 min",
-    copy:
-      "Build the foundation: sensors, gateways, data flow, protocols, cloud platforms and AI-ready architectures.",
-    topics: [
-      "IoT building blocks",
-      "Multilayered architecture",
-      "Sensors and data generation",
-      "Networking requirements",
-      "Gateways and edge concepts",
-      "Cloud IoT platforms"
-    ]
+    title: "IoT Architecture",
+    subtitle:
+      "Understand sensors, devices, gateways, networking layers, data flow, cloud platforms, and AI-ready IoT architecture.",
+    outcome: "AI-ready IoT architecture blueprint"
   },
   {
     no: "03",
-    label: "Lab System",
-    title: "IoT Foundation Hands-on Lab",
-    time: "7 labs • 49 min",
-    copy:
-      "Create a working IoT pipeline using virtual devices, MQTT, MongoDB, visualization and simulated actuation.",
-    topics: [
-      "Virtual IoT device",
-      "MQTT publisher",
-      "MQTT subscriber",
-      "MongoDB storage",
-      "Application visualization",
-      "Actuator simulation"
-    ]
+    title: "MQTT Lab System",
+    subtitle:
+      "Build a virtual IoT device, publish sensor messages, subscribe to live streams, and understand device-to-cloud communication.",
+    outcome: "Working MQTT publisher/subscriber lab"
   },
   {
     no: "04",
-    label: "Data Layer",
-    title: "Data Engineering for AIoT",
-    time: "9 lessons • 2 hr 7 min",
-    copy:
-      "Convert raw sensor streams into clean, structured, model-ready intelligence assets.",
-    topics: [
-      "Time-series and streaming data",
-      "Data ingestion",
-      "Storage models",
-      "Cleaning and normalization",
-      "Feature engineering",
-      "Missing and anomalous data"
-    ]
+    title: "Cloud Data Layer",
+    subtitle:
+      "Store IoT readings in MongoDB, structure sensor records, and prepare a database layer for analytics and AI workflows.",
+    outcome: "MongoDB IoT storage pipeline"
   },
   {
     no: "05",
-    label: "Pipeline Lab",
-    title: "Data Engineering Hands-on Labs",
-    time: "9 labs • 1 hr 35 min",
-    copy:
-      "Simulate, stream, store, transform, infer and visualize IoT data through an end-to-end AIoT pipeline.",
-    topics: [
-      "Sensor simulation",
-      "MQTT streaming",
-      "MongoDB storage",
-      "Data pipeline",
-      "Real-time AI inference",
-      "AIoT dashboard"
-    ]
+    title: "Sensor Data Engineering",
+    subtitle:
+      "Clean noisy sensor streams, handle missing values, normalize data, engineer features, and prepare model-ready datasets.",
+    outcome: "AIoT data engineering notebook"
   },
   {
     no: "06",
-    label: "AI Core",
-    title: "Machine Learning for AIoT",
-    time: "12 lessons • 2 hr 22 min",
-    copy:
-      "Apply supervised and unsupervised learning to prediction, classification, anomaly detection and maintenance problems.",
-    topics: [
-      "ML workflow",
-      "Regression for sensor prediction",
-      "Classification for device states",
-      "Unsupervised learning",
-      "Anomaly detection",
-      "Predictive maintenance"
-    ]
+    title: "ML for IoT Data",
+    subtitle:
+      "Apply regression, classification, unsupervised learning, anomaly detection, forecasting, and predictive maintenance.",
+    outcome: "Predictive maintenance and anomaly detection models"
   },
   {
     no: "07",
-    label: "Applied AI",
-    title: "AI & ML Hands-on Lab",
-    time: "7 labs • 1 hr 13 min",
-    copy:
-      "Build predictive maintenance, anomaly detection, energy forecasting, smart alerts and AIoT vision workflows.",
-    topics: [
-      "Predictive maintenance",
-      "Anomaly detection",
-      "Energy forecasting",
-      "Smart alerting",
-      "Failure classification",
-      "Computer vision lab"
-    ]
+    title: "Real-Time AI Inference",
+    subtitle:
+      "Connect trained models with live sensor pipelines and generate real-time predictions, warnings, and operational signals.",
+    outcome: "Real-time AI inference workflow"
   },
   {
     no: "08",
-    label: "Deep Models",
     title: "Deep Learning for AIoT",
-    time: "8 lessons • 1 hr 28 min",
-    copy:
-      "Explore CNNs, RNNs, LSTMs and autoencoders for image, video and time-series intelligence.",
-    topics: [
-      "Neural networks for IoT",
-      "CNNs for image and video IoT",
-      "RNNs and LSTMs",
-      "Autoencoders",
-      "Deep learning vs ML",
-      "TinyML introduction"
-    ]
+    subtitle:
+      "Use CNNs for image/video IoT, RNNs and LSTMs for time-series signals, and autoencoders for anomaly detection.",
+    outcome: "Deep learning concept lab for intelligent sensing"
   },
   {
     no: "09",
-    label: "Deployment",
-    title: "Edge AI & TinyML",
-    time: "6 lessons • 1 hr 20 min",
-    copy:
-      "Move intelligence closer to devices through edge inference, optimization and TinyML deployment thinking.",
-    topics: [
-      "Introduction to Edge AI",
-      "Introduction to TinyML",
-      "Edge vs cloud inference",
-      "Hardware ecosystems",
-      "Model optimization",
-      "Latency and privacy"
-    ]
+    title: "Edge AI",
+    subtitle:
+      "Understand edge vs cloud inference, latency, privacy, bandwidth, device constraints, and hardware ecosystems.",
+    outcome: "Edge AI deployment decision framework"
+  },
+  {
+    no: "10",
+    title: "TinyML",
+    subtitle:
+      "Explore how optimized models can run on resource-constrained devices and microcontrollers.",
+    outcome: "TinyML readiness and model optimization checklist"
+  },
+  {
+    no: "11",
+    title: "AIoT Dashboard",
+    subtitle:
+      "Design a clean dashboard for live readings, system health, anomaly status, prediction results, and alert summaries.",
+    outcome: "AIoT monitoring dashboard"
+  },
+  {
+    no: "12",
+    title: "Capstone System",
+    subtitle:
+      "Build and present a portfolio-ready AI-powered smart monitoring system with architecture, demo, report, and GitHub documentation.",
+    outcome: "Final AIoT capstone project"
   }
 ];
 
 const content = {
   en: {
-    nav: ["Manifesto", "System", "Curriculum", "Labs", "Capstone"],
-    lang: "VI",
-    eyebrow: "QuanVerse × QuanSkill • AIoT Executive Program",
-    titleA: "Artificial",
-    titleB: "Intelligence",
-    titleC: "of Things",
-    subtitle:
-      "A premium AIoT course for building intelligent connected systems that sense, stream, learn, predict and act in real time.",
-    body:
-      "This program connects IoT architecture, sensor data engineering, machine learning, deep learning, Edge AI and TinyML into one complete smart-systems pathway. It is designed for learners who want to build the next generation of intelligent infrastructure, not just understand isolated tools.",
-    primary: "Explore the curriculum",
-    secondary: "See the capstone",
-    metrics: [
-      ["9", "Strategic modules"],
-      ["50+", "Focused lessons"],
-      ["15+", "Practical labs"],
-      ["1", "Portfolio system"]
+    nav: ["Method", "Curriculum", "Projects", "Mentor"],
+    lang: "VN",
+    heroKicker: "12-week premium AIoT mission • Edge AI • TinyML • Smart Systems",
+    heroTitle: "Build Intelligent IoT Systems in the Era of AI",
+    heroText:
+      "Start from IoT foundations. Build your own AIoT pipeline. Learn sensor data engineering, MQTT communication, cloud storage, machine learning, deep learning, Edge AI, TinyML, and smart-system design.",
+    heroSub:
+      "Designed as a serious training pathway for learners who want to create intelligent connected systems that sense, analyze, predict, and act in real time.",
+    primary: "Start AIoT Mission",
+    secondary: "View 12-Week Path",
+    dossierTitle: "AIoT Builder Track",
+    dossierBadge: "Flagship",
+    dossierStats: [
+      ["12", "guided weeks"],
+      ["15+", "practical builds"],
+      ["1", "capstone system"],
+      ["0", "random tutorials"]
     ],
-    console: {
-      title: "Signal-to-Intelligence Console",
-      status: "SYSTEM ONLINE",
-      lines: [
-        "sensor.stream/temperature → stable",
-        "mqtt.broker/session → connected",
-        "feature.pipeline/status → prepared",
-        "ml.inference/anomaly → monitoring",
-        "edge.deployment/readiness → active"
-      ]
-    },
-    manifestoTitle: "IoT connects the world. AIoT teaches it to understand itself.",
-    manifestoBody:
-      "Traditional IoT systems collect readings. AIoT systems interpret behavior. They recognize patterns, detect anomalies, forecast risk, trigger smart alerts and make decisions closer to the physical environment where data is born.",
-    manifestoPoints: [
-      ["From Monitoring to Intelligence", "Move beyond dashboards into predictive, adaptive and autonomous connected systems."],
-      ["From Cloud Dependency to Edge Decisions", "Understand when inference belongs in the cloud, at the edge, or on a constrained device."],
-      ["From Raw Data to Operational Insight", "Transform streaming sensor data into clean features, models, alerts and real-time system actions."]
+    dossierBullets: [
+      "AI-ready IoT architecture and system design",
+      "MQTT pipelines, MongoDB storage, and dashboard workflows",
+      "Predictive maintenance, anomaly detection, and smart alerting",
+      "Deep learning for sensor time-series, image, and video IoT",
+      "Edge AI and TinyML thinking for resource-constrained devices"
     ],
-    systemTitle: "The AIoT intelligence loop",
-    systemBody:
-      "Every premium AIoT system follows a loop: sense, stream, store, engineer, learn and act. The course is structured around this real-world loop.",
-    loop: [
-      ["Sense", "Sensors produce temperature, vibration, humidity, energy, vision and machine-health signals."],
-      ["Stream", "MQTT, gateways and networking protocols move live device data through the system."],
-      ["Store", "MongoDB and cloud layers organize readings for analytics, dashboards and AI workflows."],
-      ["Engineer", "Cleaning, normalization and feature engineering prepare sensor data for models."],
-      ["Learn", "ML and deep learning detect anomalies, classify states and predict events."],
-      ["Act", "Smart alerts, dashboards, actuator logic, Edge AI and TinyML turn intelligence into response."]
+    focus: ["AIoT Architecture", "Sensor Data", "Machine Learning", "Edge Intelligence"],
+    methodKicker: "Program method",
+    methodTitle: "A clean learning system for serious AIoT builders.",
+    methodText:
+      "The course follows the real lifecycle of intelligent connected systems: sense physical signals, move data through reliable pipelines, engineer it for AI, train models, and close the loop with dashboards, alerts, and edge-ready decisions.",
+    method: [
+      ["01", "Sense", "Understand devices, sensors, signals, gateways, networking, and the physical context behind IoT data."],
+      ["02", "Stream", "Build MQTT communication, data ingestion, cloud storage, and live data movement workflows."],
+      ["03", "Learn", "Apply machine learning and deep learning to detect patterns, anomalies, device states, and future risks."],
+      ["04", "Act", "Create dashboards, alerts, actuator logic, and edge deployment strategies for real-time intelligence."]
     ],
-    curriculumTitle: "A curriculum that behaves like a product roadmap",
-    curriculumBody:
-      "Each module has a role in the full AIoT stack: architecture, data, intelligence, deployment and portfolio-ready implementation.",
-    labTitle: "Signature build labs",
-    labBody:
-      "The practical track makes learners build the full AIoT journey step by step, from virtual sensors to real-time inference and dashboards.",
-    labs: [
-      ["Virtual Device Studio", "Simulate realistic sensor streams for temperature, humidity, vibration, energy and machine condition."],
-      ["MQTT Communication Core", "Build publisher-subscriber flows and understand how device messages move through AIoT systems."],
-      ["Cloud Data Vault", "Store, structure and query IoT readings using MongoDB for AI and dashboard workflows."],
-      ["AIoT Data Refinery", "Clean noisy data, handle missing values and engineer predictive features."],
-      ["Predictive Maintenance Engine", "Train models that estimate risk, detect warning signs and predict possible failures."],
-      ["Smart Alerting Console", "Turn model outputs into useful alerts, operational actions and dashboard insights."]
+    outcomesKicker: "Student outcomes",
+    outcomesTitle: "Smaller promises. Stronger proof.",
+    outcomesText:
+      "Students do not only finish with theory. They finish with visible work: labs, models, dashboards, documentation, and a capstone system that can be shown professionally.",
+    deliverables: [
+      "AI-ready IoT architecture brief",
+      "Virtual IoT device simulator",
+      "MQTT publisher/subscriber pipeline",
+      "MongoDB sensor data store",
+      "Sensor data engineering notebook",
+      "Predictive maintenance model",
+      "Anomaly detection workflow",
+      "AIoT dashboard",
+      "Edge AI/TinyML deployment plan",
+      "Final smart monitoring capstone"
     ],
-    capstoneTitle: "AI-Powered Smart Monitoring System",
-    capstoneBody:
-      "The final project integrates virtual sensor data, MQTT streaming, MongoDB storage, data engineering, ML inference, smart alerts, dashboard visualization and Edge AI/TinyML readiness into one professional portfolio system.",
-    capstoneItems: [
-      "Virtual IoT sensor generation",
-      "MQTT streaming pipeline",
-      "MongoDB cloud storage",
-      "Data cleaning and feature engineering",
-      "Machine learning inference",
-      "Smart alert generation",
-      "Dashboard visualization",
-      "Edge AI/TinyML deployment discussion"
+    curriculumKicker: "12-week curriculum",
+    curriculumTitle: "From IoT foundations to AI-powered smart systems.",
+    curriculumText:
+      "Each chapter has a compact title, a deeper professional subtitle, and a clear project outcome. The structure is intentionally original and built around practical AIoT workflows.",
+    projectKicker: "Portfolio projects",
+    projectTitle: "A portfolio that looks like real capability.",
+    projectText:
+      "The projects are designed to feel practical, explainable, and professional. They help learners demonstrate AIoT understanding, data engineering ability, ML workflow design, and system-level thinking.",
+    projects: [
+      "AIoT Sensor Health Monitor",
+      "Predictive Maintenance Engine",
+      "Industrial Anomaly Detection System",
+      "Smart Energy Forecasting Dashboard",
+      "AI-Based Smart Alert Console",
+      "Edge AI Deployment Readiness Report"
     ],
-    audienceTitle: "Designed for serious builders",
-    audience: [
-      ["IoT Developers", "Add intelligence to sensor-driven systems and connected-device architectures."],
-      ["Software Engineers", "Understand how cloud, streaming, AI models and dashboards connect."],
-      ["Data Engineers", "Work with time-series, streaming, missing and anomalous sensor data."],
-      ["AI Learners", "Apply machine learning to real infrastructure and device intelligence problems."],
-      ["Embedded Learners", "Understand Edge AI, TinyML and optimization for constrained hardware."],
-      ["Researchers", "Use AIoT as a foundation for smart cities, healthcare sensing, industry and infrastructure research."]
+    architectureKicker: "Course architecture",
+    architectureTitle: "Built like a professional AIoT workflow.",
+    architectureText:
+      "The course is structured to feel like how real smart-system teams think: physical inputs, data pipelines, model reasoning, and polished operational outputs.",
+    architecture: [
+      ["Input", "Sensor readings, device states, MQTT streams, time-series data, image/video inputs, and machine-health signals."],
+      ["Pipeline", "Data ingestion, cloud storage, normalization, feature engineering, dashboards, and real-time inference hooks."],
+      ["Reasoning", "AI-assisted prediction, anomaly detection, forecasting, classification, model evaluation, and decision logic."],
+      ["Output", "Smart alerts, dashboards, actuator simulation, deployment plans, GitHub documentation, and capstone demo."]
     ],
-    finalTitle: "Build systems that do not just collect data. Build systems that understand.",
-    finalBody:
-      "A premium learning experience for the next generation of AI-powered connected infrastructure.",
-    footer: "QuanVerse AIoT Mastery • Edge AI • TinyML • Smart Systems"
+    mentorKicker: "Mentor",
+    mentorTitle: "QuanVerse AIoT Mastery",
+    mentorText:
+      "This program teaches AIoT as a complete capability: not only IoT, not only AI, but the disciplined integration of connected devices, data engineering, machine learning, and edge intelligence.",
+    mentorQuote:
+      "Do not just connect devices. Make them useful. Make them observable. Make them intelligent. Then make the intelligence safe, explainable, and deployable.",
+    faqKicker: "FAQ",
+    faqTitle: "Clear, practical, and professional.",
+    faq: [
+      ["Is this only a theory course?", "No. The course includes practical labs, data pipelines, machine learning workflows, dashboards, and a final capstone system."],
+      ["Do learners need AI experience?", "No. AI, ML, Edge AI, and TinyML concepts are introduced step by step using IoT examples."],
+      ["What makes this premium?", "The program is structured around portfolio outcomes, professional architecture thinking, guided labs, and real AIoT system design."],
+      ["Is it useful for projects and research?", "Yes. It can support smart cities, industrial IoT, healthcare monitoring, energy systems, predictive maintenance, and intelligent infrastructure work."]
+    ],
+    finalTitle: "Not an IoT tutorial. An AIoT capability program.",
+    finalText:
+      "Designed for learners who want to move beyond scattered tutorials and build practical, intelligent, AI-powered connected systems."
   },
   vi: {
-    nav: ["Tư duy", "Hệ thống", "Lộ trình", "Lab", "Capstone"],
+    nav: ["Phương pháp", "Lộ trình", "Dự án", "Mentor"],
     lang: "EN",
-    eyebrow: "QuanVerse × QuanSkill • Chương trình AIoT cao cấp",
-    titleA: "Trí tuệ",
-    titleB: "Nhân tạo",
-    titleC: "của vạn vật",
-    subtitle:
-      "Khóa học AIoT cao cấp giúp xây dựng hệ thống kết nối thông minh có khả năng cảm nhận, truyền dữ liệu, học, dự đoán và hành động theo thời gian thực.",
-    body:
-      "Chương trình kết nối kiến trúc IoT, sensor data engineering, machine learning, deep learning, Edge AI và TinyML thành một lộ trình smart-systems hoàn chỉnh.",
-    primary: "Xem curriculum",
-    secondary: "Xem capstone",
-    metrics: [
-      ["9", "Module chiến lược"],
-      ["50+", "Bài học trọng tâm"],
-      ["15+", "Lab thực hành"],
-      ["1", "Portfolio system"]
+    heroKicker: "12-week premium AIoT mission • Edge AI • TinyML • Smart Systems",
+    heroTitle: "Xây dựng hệ thống IoT thông minh trong kỷ nguyên AI",
+    heroText:
+      "Bắt đầu từ nền tảng IoT. Xây pipeline AIoT của riêng bạn. Học sensor data engineering, MQTT, cloud storage, machine learning, deep learning, Edge AI, TinyML và smart-system design.",
+    heroSub:
+      "Được thiết kế như một lộ trình nghiêm túc cho người học muốn tạo hệ thống kết nối thông minh có khả năng cảm nhận, phân tích, dự đoán và hành động theo thời gian thực.",
+    primary: "Bắt đầu AIoT Mission",
+    secondary: "Xem lộ trình 12 tuần",
+    dossierTitle: "AIoT Builder Track",
+    dossierBadge: "Flagship",
+    dossierStats: [
+      ["12", "tuần hướng dẫn"],
+      ["15+", "bài build thực hành"],
+      ["1", "capstone system"],
+      ["0", "tutorial rời rạc"]
     ],
-    console: {
-      title: "Signal-to-Intelligence Console",
-      status: "SYSTEM ONLINE",
-      lines: [
-        "sensor.stream/temperature → stable",
-        "mqtt.broker/session → connected",
-        "feature.pipeline/status → prepared",
-        "ml.inference/anomaly → monitoring",
-        "edge.deployment/readiness → active"
-      ]
-    },
-    manifestoTitle: "IoT kết nối thế giới. AIoT giúp thế giới đó tự hiểu chính nó.",
-    manifestoBody:
-      "IoT truyền thống thu thập dữ liệu. AIoT diễn giải hành vi. Nó nhận diện pattern, phát hiện bất thường, dự đoán risk, tạo smart alert và đưa quyết định đến gần môi trường vật lý.",
-    manifestoPoints: [
-      ["Từ monitoring đến intelligence", "Vượt qua dashboard để xây hệ thống connected có khả năng dự đoán và thích ứng."],
-      ["Từ cloud dependency đến edge decisions", "Hiểu khi nào inference nên ở cloud, edge hoặc thiết bị tài nguyên thấp."],
-      ["Từ raw data đến operational insight", "Biến sensor data thành feature, model, alert và real-time action."]
+    dossierBullets: [
+      "Kiến trúc IoT sẵn sàng cho AI",
+      "MQTT pipeline, MongoDB storage và dashboard workflow",
+      "Predictive maintenance, anomaly detection và smart alerting",
+      "Deep learning cho sensor time-series, image và video IoT",
+      "Edge AI và TinyML cho thiết bị tài nguyên thấp"
     ],
-    systemTitle: "Vòng lặp intelligence của AIoT",
-    systemBody:
-      "Một hệ thống AIoT cao cấp đi theo vòng lặp: sense, stream, store, engineer, learn và act.",
-    loop: [
-      ["Sense", "Sensor tạo tín hiệu nhiệt độ, rung động, độ ẩm, năng lượng, vision và machine-health."],
-      ["Stream", "MQTT, gateway và networking protocol đưa dữ liệu live qua hệ thống."],
-      ["Store", "MongoDB và cloud layer tổ chức dữ liệu cho analytics, dashboard và AI workflow."],
-      ["Engineer", "Cleaning, normalization và feature engineering chuẩn bị sensor data cho model."],
-      ["Learn", "ML và deep learning phát hiện anomaly, phân loại trạng thái và dự đoán sự kiện."],
-      ["Act", "Smart alert, dashboard, actuator logic, Edge AI và TinyML biến intelligence thành response."]
+    focus: ["AIoT Architecture", "Sensor Data", "Machine Learning", "Edge Intelligence"],
+    methodKicker: "Phương pháp học",
+    methodTitle: "Một hệ thống học sạch cho AIoT builders nghiêm túc.",
+    methodText:
+      "Khóa học đi theo lifecycle thật của hệ thống kết nối thông minh: cảm nhận tín hiệu vật lý, truyền dữ liệu, engineering dữ liệu cho AI, huấn luyện model và đóng vòng lặp bằng dashboard, alert và edge decision.",
+    method: [
+      ["01", "Sense", "Hiểu device, sensor, signal, gateway, networking và bối cảnh vật lý phía sau dữ liệu IoT."],
+      ["02", "Stream", "Xây MQTT communication, data ingestion, cloud storage và live data workflow."],
+      ["03", "Learn", "Áp dụng ML/DL để phát hiện pattern, anomaly, device state và future risk."],
+      ["04", "Act", "Tạo dashboard, alert, actuator logic và edge deployment strategy cho real-time intelligence."]
     ],
-    curriculumTitle: "Curriculum giống một product roadmap nghiêm túc",
-    curriculumBody:
-      "Mỗi module có vai trò trong AIoT stack: architecture, data, intelligence, deployment và implementation cho portfolio.",
-    labTitle: "Các lab build đặc trưng",
-    labBody:
-      "Track thực hành giúp người học build AIoT từng bước, từ virtual sensor đến real-time inference và dashboard.",
-    labs: [
-      ["Virtual Device Studio", "Mô phỏng sensor stream cho nhiệt độ, độ ẩm, rung động, năng lượng và machine condition."],
-      ["MQTT Communication Core", "Xây publisher-subscriber flow và hiểu message thiết bị di chuyển như thế nào."],
-      ["Cloud Data Vault", "Lưu, cấu trúc và query IoT readings bằng MongoDB cho AI và dashboard."],
-      ["AIoT Data Refinery", "Làm sạch dữ liệu nhiễu, xử lý missing values và tạo predictive features."],
-      ["Predictive Maintenance Engine", "Huấn luyện model ước lượng risk và dự đoán failure có thể xảy ra."],
-      ["Smart Alerting Console", "Biến model output thành alert, operational action và dashboard insight."]
+    outcomesKicker: "Kết quả học viên",
+    outcomesTitle: "Cam kết nhỏ hơn. Bằng chứng mạnh hơn.",
+    outcomesText:
+      "Người học không chỉ kết thúc với lý thuyết. Họ có lab, model, dashboard, documentation và capstone system có thể trình bày chuyên nghiệp.",
+    deliverables: [
+      "AI-ready IoT architecture brief",
+      "Virtual IoT device simulator",
+      "MQTT publisher/subscriber pipeline",
+      "MongoDB sensor data store",
+      "Sensor data engineering notebook",
+      "Predictive maintenance model",
+      "Anomaly detection workflow",
+      "AIoT dashboard",
+      "Edge AI/TinyML deployment plan",
+      "Final smart monitoring capstone"
     ],
-    capstoneTitle: "Hệ thống giám sát thông minh dùng AI",
-    capstoneBody:
-      "Dự án cuối khóa tích hợp virtual sensor data, MQTT streaming, MongoDB storage, data engineering, ML inference, smart alerts, dashboard visualization và Edge AI/TinyML readiness.",
-    capstoneItems: [
-      "Tạo dữ liệu cảm biến IoT ảo",
-      "MQTT streaming pipeline",
-      "MongoDB cloud storage",
-      "Data cleaning và feature engineering",
-      "Machine learning inference",
-      "Smart alert generation",
-      "Dashboard visualization",
-      "Edge AI/TinyML deployment discussion"
+    curriculumKicker: "Lộ trình 12 tuần",
+    curriculumTitle: "Từ nền tảng IoT đến AI-powered smart systems.",
+    curriculumText:
+      "Mỗi chương có title gọn, subtitle chuyên nghiệp và project outcome rõ ràng. Cấu trúc được xây quanh AIoT workflow thực tế.",
+    projectKicker: "Portfolio projects",
+    projectTitle: "Portfolio nhìn giống năng lực thật.",
+    projectText:
+      "Các dự án được thiết kế thực tế, dễ giải thích và chuyên nghiệp, giúp người học chứng minh tư duy AIoT, data engineering, ML workflow và system thinking.",
+    projects: [
+      "AIoT Sensor Health Monitor",
+      "Predictive Maintenance Engine",
+      "Industrial Anomaly Detection System",
+      "Smart Energy Forecasting Dashboard",
+      "AI-Based Smart Alert Console",
+      "Edge AI Deployment Readiness Report"
     ],
-    audienceTitle: "Dành cho builder nghiêm túc",
-    audience: [
-      ["IoT Developers", "Thêm intelligence vào sensor-driven systems và connected-device architectures."],
-      ["Software Engineers", "Hiểu cloud, streaming, AI model và dashboard kết nối với nhau."],
-      ["Data Engineers", "Làm việc với time-series, streaming, missing và anomalous sensor data."],
-      ["AI Learners", "Áp dụng ML vào bài toán infrastructure và device intelligence thực tế."],
-      ["Embedded Learners", "Hiểu Edge AI, TinyML và optimization cho hardware giới hạn."],
-      ["Researchers", "Dùng AIoT làm nền cho smart cities, healthcare sensing, industry và infrastructure research."]
+    architectureKicker: "Course architecture",
+    architectureTitle: "Được xây như một AIoT workflow chuyên nghiệp.",
+    architectureText:
+      "Khóa học mô phỏng cách team smart-system thật tư duy: physical inputs, data pipelines, model reasoning và operational outputs.",
+    architecture: [
+      ["Input", "Sensor readings, device states, MQTT streams, time-series data, image/video inputs và machine-health signals."],
+      ["Pipeline", "Data ingestion, cloud storage, normalization, feature engineering, dashboard và real-time inference hooks."],
+      ["Reasoning", "Prediction, anomaly detection, forecasting, classification, model evaluation và decision logic."],
+      ["Output", "Smart alert, dashboard, actuator simulation, deployment plan, GitHub documentation và capstone demo."]
     ],
-    finalTitle: "Đừng chỉ xây hệ thống thu thập dữ liệu. Hãy xây hệ thống biết hiểu dữ liệu.",
-    finalBody:
-      "Một trải nghiệm học cao cấp cho thế hệ hạ tầng kết nối thông minh dùng AI.",
-    footer: "QuanVerse AIoT Mastery • Edge AI • TinyML • Smart Systems"
+    mentorKicker: "Mentor",
+    mentorTitle: "QuanVerse AIoT Mastery",
+    mentorText:
+      "Chương trình dạy AIoT như một capability hoàn chỉnh: không chỉ IoT, không chỉ AI, mà là sự tích hợp có kỷ luật giữa connected devices, data engineering, machine learning và edge intelligence.",
+    mentorQuote:
+      "Đừng chỉ kết nối thiết bị. Hãy làm chúng hữu ích, quan sát được, thông minh, an toàn, giải thích được và triển khai được.",
+    faqKicker: "FAQ",
+    faqTitle: "Rõ ràng, thực tế và chuyên nghiệp.",
+    faq: [
+      ["Đây chỉ là khóa lý thuyết?", "Không. Khóa học có lab, data pipeline, ML workflow, dashboard và final capstone system."],
+      ["Có cần biết AI trước không?", "Không. AI, ML, Edge AI và TinyML được giới thiệu từng bước qua ví dụ IoT."],
+      ["Điều gì làm khóa học premium?", "Chương trình tập trung vào portfolio outcomes, architecture thinking, guided labs và real AIoT system design."],
+      ["Có hữu ích cho project/research không?", "Có. Phù hợp cho smart cities, industrial IoT, healthcare monitoring, energy systems, predictive maintenance và intelligent infrastructure."]
+    ],
+    finalTitle: "Không phải IoT tutorial. Đây là chương trình năng lực AIoT.",
+    finalText:
+      "Dành cho người học muốn vượt qua tutorial rời rạc và xây hệ thống connected thông minh dùng AI."
   }
 };
 
@@ -339,211 +294,199 @@ export default function Home() {
 
   return (
     <main className="page">
-      <div className="grain" />
-      <div className="aurora auroraOne" />
-      <div className="aurora auroraTwo" />
+      <div className="page-glow page-glow-one" />
+      <div className="page-glow page-glow-two" />
 
       <nav className="nav">
-        <div className="navInner">
-          <a href="#top" className="brand">
+        <div className="nav-inner">
+          <a href="#top" className="brand" aria-label="QuanVerse AIoT Mastery">
             <img src="/quanverse-aiot-logo.svg" alt="QuanVerse AIoT Mastery" />
           </a>
 
-          <div className="navLinks">
-            <a href="#manifesto">{t.nav[0]}</a>
-            <a href="#system">{t.nav[1]}</a>
-            <a href="#curriculum">{t.nav[2]}</a>
-            <a href="#labs">{t.nav[3]}</a>
-            <a href="#capstone">{t.nav[4]}</a>
+          <div className="nav-links">
+            <a href="#method">{t.nav[0]}</a>
+            <a href="#curriculum">{t.nav[1]}</a>
+            <a href="#projects">{t.nav[2]}</a>
+            <a href="#mentor">{t.nav[3]}</a>
             <button onClick={() => setLang(lang === "en" ? "vi" : "en")}>{t.lang}</button>
           </div>
         </div>
       </nav>
 
       <section className="hero" id="top">
-        <div className="heroLeft">
-          <div className="eyebrow">{t.eyebrow}</div>
+        <div className="hero-copy">
+          <p className="kicker">{t.heroKicker}</p>
+          <h1>{t.heroTitle}</h1>
+          <p className="hero-lead">{t.heroText}</p>
+          <p className="hero-sub">{t.heroSub}</p>
 
-          <h1>
-            <span>{t.titleA}</span>
-            <span>{t.titleB}</span>
-            <span>{t.titleC}</span>
-          </h1>
+          <div className="hero-actions">
+            <a className="primary-button" href="#curriculum">{t.primary}</a>
+            <a className="secondary-button" href="#projects">{t.secondary}</a>
+          </div>
+        </div>
 
-          <p className="heroSubtitle">{t.subtitle}</p>
-          <p className="heroBody">{t.body}</p>
-
-          <div className="heroActions">
-            <a href="#curriculum" className="buttonPrimary">{t.primary}</a>
-            <a href="#capstone" className="buttonSecondary">{t.secondary}</a>
+        <aside className="dossier">
+          <div className="dossier-top">
+            <span>Program dossier</span>
+            <b>{t.dossierBadge}</b>
           </div>
 
-          <div className="metrics">
-            {t.metrics.map(([value, label]) => (
+          <h2>{t.dossierTitle}</h2>
+
+          <div className="dossier-stats">
+            {t.dossierStats.map(([value, label]) => (
               <div key={label}>
                 <strong>{value}</strong>
                 <span>{label}</span>
               </div>
             ))}
           </div>
-        </div>
 
-        <aside className="console">
-          <div className="consoleTop">
-            <div>
-              <span>AIOT://MISSION-CONTROL</span>
-              <strong>{t.console.title}</strong>
-            </div>
-            <b>{t.console.status}</b>
-          </div>
-
-          <div className="consoleBody">
-            {t.console.lines.map((line) => (
-              <code key={line}>{line}</code>
+          <ul>
+            {t.dossierBullets.map((item) => (
+              <li key={item}>{item}</li>
             ))}
-          </div>
+          </ul>
 
-          <div className="orbital">
-            <div className="orbit orbitOne" />
-            <div className="orbit orbitTwo" />
-            <div className="orbit orbitThree" />
-            <div className="orbitalCore">
-              <strong>AIoT</strong>
-              <span>Sense → Learn → Act</span>
-            </div>
-
-            <div className="miniNode nodeOne">Sensor</div>
-            <div className="miniNode nodeTwo">MQTT</div>
-            <div className="miniNode nodeThree">ML</div>
-            <div className="miniNode nodeFour">Edge</div>
+          <div className="focus-grid">
+            {t.focus.map((item) => (
+              <span key={item}>Focus {item}</span>
+            ))}
           </div>
         </aside>
       </section>
 
-      <section className="manifesto" id="manifesto">
-        <div className="sectionHeader">
-          <span>01 / Manifesto</span>
-          <h2>{t.manifestoTitle}</h2>
-          <p>{t.manifestoBody}</p>
+      <section className="method" id="method">
+        <div className="section-head">
+          <span>{t.methodKicker}</span>
+          <h2>{t.methodTitle}</h2>
+          <p>{t.methodText}</p>
         </div>
 
-        <div className="manifestoGrid">
-          {t.manifestoPoints.map(([title, body]) => (
+        <div className="method-grid">
+          {t.method.map(([no, title, text]) => (
             <article key={title}>
+              <small>{no}</small>
               <h3>{title}</h3>
-              <p>{body}</p>
+              <p>{text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="system" id="system">
-        <div className="sectionHeader wide">
-          <span>02 / System Design</span>
-          <h2>{t.systemTitle}</h2>
-          <p>{t.systemBody}</p>
+      <section className="outcomes">
+        <div className="section-head">
+          <span>{t.outcomesKicker}</span>
+          <h2>{t.outcomesTitle}</h2>
+          <p>{t.outcomesText}</p>
         </div>
 
-        <div className="loop">
-          {t.loop.map(([title, body], index) => (
-            <article key={title}>
-              <small>{String(index + 1).padStart(2, "0")}</small>
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </article>
+        <div className="deliverables">
+          {t.deliverables.map((item) => (
+            <div key={item}>
+              <span>Deliverable</span>
+              <b>{item}</b>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="curriculum" id="curriculum">
-        <div className="sectionHeader wide">
-          <span>03 / Curriculum Architecture</span>
+        <div className="section-head wide">
+          <span>{t.curriculumKicker}</span>
           <h2>{t.curriculumTitle}</h2>
-          <p>{t.curriculumBody}</p>
+          <p>{t.curriculumText}</p>
         </div>
 
-        <div className="moduleList">
-          {modules.map((module, index) => (
-            <details className="module" key={module.title} open={index < 2}>
-              <summary>
-                <div className="moduleNo">{module.no}</div>
-                <div className="moduleMain">
-                  <span>{module.label}</span>
-                  <h3>{module.title}</h3>
-                  <p>{module.copy}</p>
+        <div className="week-list">
+          {weeks.map((week) => (
+            <article className="week" key={week.no}>
+              <div className="week-no">{week.no}</div>
+              <div className="week-main">
+                <h3>{week.title}</h3>
+                <p>{week.subtitle}</p>
+                <div>
+                  <span>Lab outcome</span>
+                  <b>{week.outcome}</b>
                 </div>
-                <div className="moduleTime">{module.time}</div>
-              </summary>
-
-              <div className="topicCloud">
-                {module.topics.map((topic) => (
-                  <span key={topic}>{topic}</span>
-                ))}
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="projects" id="projects">
+        <div className="section-head">
+          <span>{t.projectKicker}</span>
+          <h2>{t.projectTitle}</h2>
+          <p>{t.projectText}</p>
+        </div>
+
+        <div className="project-grid">
+          {t.projects.map((project, index) => (
+            <article key={project}>
+              <small>{String(index + 1).padStart(2, "0")}</small>
+              <h3>{project}</h3>
+              <p>A guided build designed for GitHub documentation, project explanation, and professional presentation.</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="architecture">
+        <div className="section-head">
+          <span>{t.architectureKicker}</span>
+          <h2>{t.architectureTitle}</h2>
+          <p>{t.architectureText}</p>
+        </div>
+
+        <div className="architecture-grid">
+          {t.architecture.map(([title, text]) => (
+            <article key={title}>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mentor" id="mentor">
+        <div className="mentor-card">
+          <div>
+            <span>{t.mentorKicker}</span>
+            <h2>{t.mentorTitle}</h2>
+            <p>{t.mentorText}</p>
+          </div>
+          <blockquote>{t.mentorQuote}</blockquote>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="section-head">
+          <span>{t.faqKicker}</span>
+          <h2>{t.faqTitle}</h2>
+        </div>
+
+        <div className="faq-list">
+          {t.faq.map(([question, answer]) => (
+            <details key={question}>
+              <summary>{question}</summary>
+              <p>{answer}</p>
             </details>
           ))}
         </div>
       </section>
 
-      <section className="labs" id="labs">
-        <div className="sectionHeader wide">
-          <span>04 / Practical Build Track</span>
-          <h2>{t.labTitle}</h2>
-          <p>{t.labBody}</p>
-        </div>
-
-        <div className="labGrid">
-          {t.labs.map(([title, body], index) => (
-            <article key={title}>
-              <small>{String(index + 1).padStart(2, "0")}</small>
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="capstone" id="capstone">
-        <div className="capstonePanel">
-          <div>
-            <span>05 / Portfolio Capstone</span>
-            <h2>{t.capstoneTitle}</h2>
-            <p>{t.capstoneBody}</p>
-          </div>
-
-          <div className="capstoneItems">
-            {t.capstoneItems.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="audience">
-        <div className="sectionHeader wide">
-          <span>06 / Audience</span>
-          <h2>{t.audienceTitle}</h2>
-        </div>
-
-        <div className="audienceGrid">
-          {t.audience.map(([title, body]) => (
-            <article key={title}>
-              <h3>{title}</h3>
-              <p>{body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="finalCta">
+      <section className="final">
+        <span>Final position</span>
         <h2>{t.finalTitle}</h2>
-        <p>{t.finalBody}</p>
-        <a href="#top" className="buttonPrimary">Back to top</a>
+        <p>{t.finalText}</p>
       </section>
 
       <footer>
-        <span>{t.footer}</span>
-        <span>© 2026 QuanVerse</span>
+        <span>© 2026 AIoT Mastery Professional Program. All rights reserved.</span>
+        <span>Smart systems. Responsible AI. Real portfolio work.</span>
       </footer>
     </main>
   );

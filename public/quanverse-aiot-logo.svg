@@ -1,20 +1,26 @@
-<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="720" height="180" fill="transparent"/>
-  <g transform="translate(16 28)">
-    <path d="M18 0H72C82 0 90 8 90 18V38H49C43 38 38 43 38 49V64H18C8 64 0 56 0 46V18C0 8 8 0 18 0Z" fill="#6D28D9"/>
-    <path d="M0 72H42C48 72 53 67 53 61V46H72C82 46 90 54 90 64V92C90 102 82 110 72 110H18C8 110 0 102 0 92V72Z" fill="#FF9F1C"/>
-    <rect x="53" y="38" width="21" height="21" rx="6" fill="#0B1020"/>
-    <rect x="16" y="54" width="21" height="21" rx="6" fill="#0B1020"/>
+<svg width="760" height="190" viewBox="0 0 760 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="760" height="190" fill="transparent"/>
+  <g transform="translate(20 34)">
+    <path d="M18 0H74C85.0457 0 94 8.9543 94 20V40H51C44.3726 40 39 45.3726 39 52V68H18C8.05888 68 0 59.9411 0 50V18C0 8.05887 8.05888 0 18 0Z" fill="#6D28D9"/>
+    <path d="M0 78H43C49.6274 78 55 72.6274 55 66V50H76C85.9411 50 94 58.0589 94 68V100C94 109.941 85.9411 118 76 118H18C8.05888 118 0 109.941 0 100V78Z" fill="#FF9F1C"/>
+    <rect x="55" y="40" width="22" height="22" rx="6" fill="#08111E"/>
+    <rect x="17" y="57" width="22" height="22" rx="6" fill="#08111E"/>
   </g>
-  <g transform="translate(132 42)">
-    <text x="0" y="42" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="850" fill="#F8FBFF" letter-spacing="-1.8">QuanVerse</text>
-    <text x="0" y="78" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="900" fill="#5EE7FF" letter-spacing="3.8">AIOT INTELLIGENCE MASTERY</text>
+
+  <g transform="translate(136 48)">
+    <text x="0" y="42" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="850" fill="#F8FBFF" letter-spacing="-2">QuanVerse</text>
+    <text x="0" y="82" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="950" fill="#18F0FF" letter-spacing="4.2">AIOT MASTERY</text>
   </g>
-  <g transform="translate(500 52)">
-    <rect width="178" height="54" rx="27" fill="#101827" stroke="#1F3658"/>
-    <text x="28" y="34" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#AEBBD3">by</text>
-    <path d="M62 14H86C91 14 95 18 95 23V29H78C75 29 73 31 73 34V41H62C57 41 53 37 53 32V23C53 18 57 14 62 14Z" fill="#6D28D9"/>
-    <path d="M53 45H75C78 45 81 42 81 39V32H90C95 32 99 36 99 41V50C99 55 95 59 90 59H62C57 59 53 55 53 50V45Z" fill="#FF9F1C" transform="translate(0 -10)"/>
-    <text x="108" y="34" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="900" fill="#F8FBFF">QuanSkill</text>
+
+  <g transform="translate(508 57)">
+    <rect width="205" height="58" rx="29" fill="#0F1929" stroke="#1A3B5A"/>
+    <text x="24" y="36" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#9FB0C7">A Community by</text>
+    <g transform="translate(122 16) scale(.44)">
+      <path d="M18 0H74C85.0457 0 94 8.9543 94 20V40H51C44.3726 40 39 45.3726 39 52V68H18C8.05888 68 0 59.9411 0 50V18C0 8.05887 8.05888 0 18 0Z" fill="#6D28D9"/>
+      <path d="M0 78H43C49.6274 78 55 72.6274 55 66V50H76C85.9411 50 94 58.0589 94 68V100C94 109.941 85.9411 118 76 118H18C8.05888 118 0 109.941 0 100V78Z" fill="#FF9F1C"/>
+      <rect x="55" y="40" width="22" height="22" rx="6" fill="#08111E"/>
+      <rect x="17" y="57" width="22" height="22" rx="6" fill="#08111E"/>
+    </g>
+    <text x="168" y="36" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#F8FBFF">QS</text>
   </g>
 </svg>
