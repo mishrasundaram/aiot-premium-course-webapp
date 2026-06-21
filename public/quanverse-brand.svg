@@ -1,0 +1,26 @@
+<svg width="980" height="170" viewBox="0 0 980 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="980" height="170" fill="white" fill-opacity="0"/>
+  <g transform="translate(0 20)">
+    <path d="M24 0H92C103.046 0 112 8.95431 112 20V48H64C56.268 48 50 54.268 50 62V84H24C10.7452 84 0 73.2548 0 60V24C0 10.7452 10.7452 0 24 0Z" fill="#2563EB"/>
+    <path d="M0 96H42C49.732 96 56 89.732 56 82V60H88C101.255 60 112 70.7452 112 84V126C112 139.255 101.255 150 88 150H24C10.7452 150 0 139.255 0 126V96Z" fill="#F59E0B"/>
+    <path d="M74 8L103 28L62 56V30C62 21.1634 66.2752 13.1321 74 8Z" fill="#1D4ED8"/>
+    <path d="M39 104L67 83V118C67 126.313 62.9689 134.113 56.1917 138.915L39 150L10 129L39 104Z" fill="#D97706"/>
+  </g>
+
+  <g transform="translate(150 42)">
+    <text x="0" y="52" font-family="Inter, Arial, sans-serif" font-size="74" font-weight="850" fill="#0A0A0A" letter-spacing="-2.2">QuanVerse</text>
+  </g>
+
+  <g transform="translate(522 50)">
+    <text x="0" y="42" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="500" fill="#4F46E5" letter-spacing="-0.8">A Community by</text>
+  </g>
+
+  <g transform="translate(825 34)">
+    <path d="M18 0H54C62.8366 0 70 7.16344 70 16V33H44C38.4772 33 34 37.4772 34 43V58H18C8.05887 58 0 49.9411 0 40V18C0 8.05887 8.05887 0 18 0Z" fill="#2563EB"/>
+    <path d="M0 68H30C35.5228 68 40 63.5228 40 58V40H56C65.9411 40 74 48.0589 74 58V84C74 93.9411 65.9411 102 56 102H18C8.05888 102 0 93.9411 0 84V68Z" fill="#F59E0B"/>
+  </g>
+
+  <g transform="translate(912 50)">
+    <text x="0" y="42" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="700" fill="#0A0A0A" letter-spacing="-1.2">QuanSkill</text>
+  </g>
+</svg>
