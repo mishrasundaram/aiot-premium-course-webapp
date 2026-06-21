@@ -1312,3 +1312,206 @@ button {
     height: 42px;
   }
 }
+
+/* =========================================================
+   Final Clean Header + Logo + Spacing + Hero Title Fix
+========================================================= */
+
+/* Match logo background with the whole header */
+.site-header {
+  background:
+    linear-gradient(90deg, #061823 0%, #06131f 42%, #070a14 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+/* Use the real logo image cleanly */
+.logo-image-zone,
+.brand-zone {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-image {
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+  background: transparent !important;
+}
+
+.brand-image img {
+  display: block;
+  width: 500px;
+  max-width: min(500px, 52vw);
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  /* this hides the jpeg rectangle by blending dark pixels with header */
+  mix-blend-mode: lighten;
+}
+
+/* Header spacing */
+.nav-shell {
+  min-height: 82px !important;
+}
+
+.nav-links {
+  gap: 22px !important;
+}
+
+.nav-links a {
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.nav-links button {
+  height: 44px !important;
+  min-width: 54px !important;
+}
+
+/* Reduce hero empty space */
+.hero {
+  min-height: auto !important;
+  padding-top: 46px !important;
+  padding-bottom: 64px !important;
+  gap: 48px !important;
+  align-items: start !important;
+}
+
+.hero-copy {
+  padding-top: 12px !important;
+}
+
+/* Main title: smaller, cleaner, not too bold */
+.hero h1 {
+  max-width: 650px !important;
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(3.05rem, 4.65vw, 4.65rem) !important;
+  font-weight: 650 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.028em !important;
+  text-wrap: balance;
+}
+
+/* Subtitle readable and premium */
+.hero-subtitle {
+  max-width: 690px !important;
+  margin-top: 22px !important;
+  font-size: clamp(1.22rem, 1.65vw, 1.58rem) !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.006em !important;
+}
+
+.hero-note {
+  margin-top: 16px !important;
+  max-width: 680px !important;
+  line-height: 1.78 !important;
+}
+
+.hero-actions {
+  margin-top: 24px !important;
+}
+
+.hero-pills {
+  margin-top: 20px !important;
+}
+
+.hero-support {
+  margin-top: 14px !important;
+}
+
+/* Right panel tighter */
+.hero-panel {
+  padding: 28px !important;
+}
+
+.hero-panel h2 {
+  font-size: clamp(2.35rem, 3.55vw, 3.7rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.028em !important;
+}
+
+.panel-stats {
+  margin-top: 22px !important;
+}
+
+.highlight-list {
+  margin-top: 22px !important;
+}
+
+/* Reduce empty gaps between sections */
+.section {
+  padding-top: 68px !important;
+  padding-bottom: 68px !important;
+}
+
+.section-head {
+  margin-bottom: 28px !important;
+}
+
+.section-head h2,
+.final-section h2 {
+  font-size: clamp(2.65rem, 4.35vw, 4.85rem) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.03em !important;
+}
+
+.section-head p,
+.final-section p {
+  margin-top: 16px !important;
+}
+
+/* Curriculum and cards tighter */
+.module-list {
+  gap: 10px !important;
+}
+
+.module-row {
+  padding: 18px !important;
+  border-radius: 22px !important;
+}
+
+.studio-grid,
+.project-grid,
+.faq-grid {
+  gap: 12px !important;
+}
+
+/* Final section less oversized */
+.final-section {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+  margin-top: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .brand-image img {
+    width: 250px;
+    max-width: 64vw;
+  }
+
+  .hero {
+    padding-top: 38px !important;
+    padding-bottom: 54px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.65rem, 11vw, 3.75rem) !important;
+    line-height: 1.09 !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem !important;
+  }
+
+  .section {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+  }
+}
