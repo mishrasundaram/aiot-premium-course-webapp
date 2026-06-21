@@ -950,3 +950,274 @@ button {
     padding: 58px 24px;
   }
 }
+
+/* =========================================================
+   Final Logo + Typography Fix
+   - Logo closer to original
+   - Smaller title, larger subtitle
+   - Fix overlapping letters
+========================================================= */
+
+/* ---------- Header / Logo ---------- */
+
+.nav-shell {
+  min-height: 90px;
+}
+
+.brand-zone {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.brand-composite {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.qv-symbol {
+  width: 52px;
+  height: 52px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+}
+
+.qv-blue,
+.qv-gold {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.qv-blue {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #2f73ff 0%, #1c56df 100%);
+  border-bottom-right-radius: 20px;
+}
+
+.qv-gold {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffb52c 0%, #e08b00 100%);
+  border-top-left-radius: 20px;
+}
+
+.qv-symbol::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 21px;
+  top: 21px;
+  border-radius: 4px;
+  background: #06111d;
+  box-shadow: 10px 10px 0 #06111d;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-copy strong {
+  color: #ffffff;
+  font-size: 1.08rem;         /* title smaller */
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.brand-copy small {
+  margin-top: 6px;
+  color: #18e7ff;
+  font-size: 0.92rem;         /* subtitle larger */
+  line-height: 1.08;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.community-badge {
+  min-height: 48px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+    rgba(8, 22, 36, 0.72);
+  border: 1px solid rgba(21, 232, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.05),
+    0 14px 30px rgba(0,0,0,0.16);
+  white-space: nowrap;
+}
+
+.community-badge > span:first-child {
+  color: #7e95ff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.community-badge strong {
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.qs-symbol {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.qs-symbol span {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 6px;
+}
+
+.qs-symbol span:first-child {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #2f73ff, #1c56df);
+  border-bottom-right-radius: 10px;
+}
+
+.qs-symbol span:last-child {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffb52c, #e08b00);
+  border-top-left-radius: 10px;
+}
+
+/* ---------- Fix overlapping letters / headline spacing ---------- */
+
+.hero h1 {
+  letter-spacing: -0.028em !important;
+  line-height: 1.02 !important;
+  word-spacing: normal;
+}
+
+.hero-subtitle {
+  letter-spacing: -0.01em !important;
+  line-height: 1.45 !important;
+}
+
+.hero-note {
+  line-height: 1.82 !important;
+}
+
+.hero-panel h2,
+.section-head h2,
+.final-section h2 {
+  letter-spacing: -0.028em !important;
+  line-height: 1.02 !important;
+}
+
+.module-main h3,
+.studio-grid h3,
+.project-grid h3,
+.faq-grid h3 {
+  letter-spacing: -0.01em !important;
+  line-height: 1.22 !important;
+}
+
+.module-main p,
+.studio-grid p,
+.project-grid p,
+.faq-grid p,
+.hero-panel > p,
+.section-head p,
+.final-section p {
+  line-height: 1.76 !important;
+}
+
+/* avoid too much squeezing on large serif text */
+.hero h1,
+.hero-panel h2,
+.section-head h2,
+.final-section h2 {
+  text-wrap: balance;
+}
+
+/* ---------- Small visual cleanup ---------- */
+
+.nav-links {
+  gap: 24px;
+}
+
+.nav-links a {
+  letter-spacing: 0.01em;
+}
+
+.hero {
+  padding-top: 72px;
+}
+
+.panel-stats strong {
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 1080px) {
+  .community-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-zone {
+    gap: 14px;
+  }
+
+  .qv-symbol {
+    width: 44px;
+    height: 44px;
+  }
+
+  .qv-blue,
+  .qv-gold {
+    width: 30px;
+    height: 30px;
+  }
+
+  .qv-symbol::after {
+    width: 9px;
+    height: 9px;
+    left: 18px;
+    top: 18px;
+    box-shadow: 9px 9px 0 #06111d;
+  }
+
+  .brand-copy strong {
+    font-size: 1rem;
+  }
+
+  .brand-copy small {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero h1 {
+    line-height: 1.03 !important;
+  }
+
+  .hero-panel h2,
+  .section-head h2,
+  .final-section h2 {
+    line-height: 1.04 !important;
+  }
+}

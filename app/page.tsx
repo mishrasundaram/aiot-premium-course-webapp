@@ -214,7 +214,7 @@ export default function Home() {
               </span>
               <span className="brand-copy">
                 <strong>QuanVerse</strong>
-                <small>AIoT Intelligence Mastery</small>
+                <small>AIOT MASTERY</small>
               </span>
             </a>
 
