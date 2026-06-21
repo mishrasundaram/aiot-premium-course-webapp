@@ -206,9 +206,30 @@ export default function Home() {
 
       <header className="site-header">
         <div className="container nav-shell">
-          <a href="#top" className="qv-lockup-link" aria-label="QuanVerse AIoT Mastery">
-            <img src="/qv-aiot-lockup.svg" alt="QuanVerse AIoT Mastery - A Community by QuanSkill" />
-          </a>
+          <div className="qv-original-lockup">
+            <a href="#top" className="qv-original-brand" aria-label="QuanVerse AIoT Mastery">
+              <span className="qv-original-mark" aria-hidden="true">
+                <span className="mark-blue"></span>
+                <span className="mark-gold"></span>
+                <span className="mark-cut cut-one"></span>
+                <span className="mark-cut cut-two"></span>
+              </span>
+
+              <span className="qv-original-text">
+                <strong>QuanVerse</strong>
+                <small>AIOT MASTERY</small>
+              </span>
+            </a>
+
+            <div className="qv-original-community">
+              <span>A Community by</span>
+              <span className="qs-original-mark" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+              <strong>QuanSkill</strong>
+            </div>
+          </div>
 
           <nav className="nav-links">
             <a href="#overview">{t.nav[0]}</a>

@@ -2554,3 +2554,271 @@ button {
     line-height: 1.13 !important;
   }
 }
+
+/* =========================================================
+   TRUE FINAL LOGO FIX
+   Balanced like original reference.
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 78, 88, 0.28), transparent 38%),
+    linear-gradient(90deg, #061b24 0%, #050a13 48%, #050711 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* kill every old logo version */
+.qv-lockup-link,
+.qv-lockup-link img,
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* full lockup */
+.qv-original-lockup {
+  display: flex !important;
+  align-items: center !important;
+  gap: 34px !important;
+  min-width: 0 !important;
+}
+
+.qv-original-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* main mark: smaller, balanced */
+.qv-original-mark {
+  width: 38px !important;
+  height: 38px !important;
+  position: relative !important;
+  display: inline-block !important;
+  flex: 0 0 38px !important;
+}
+
+.qv-original-mark .mark-blue,
+.qv-original-mark .mark-gold {
+  position: absolute !important;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 7px !important;
+}
+
+.qv-original-mark .mark-blue {
+  top: 0 !important;
+  left: 0 !important;
+  background: linear-gradient(135deg, #b516ff 0%, #8d19ff 45%, #5b22ff 100%) !important;
+  border-bottom-right-radius: 14px !important;
+}
+
+.qv-original-mark .mark-gold {
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, #ffbc2f 0%, #ff9d12 54%, #df8500 100%) !important;
+  border-top-left-radius: 14px !important;
+}
+
+.qv-original-mark .mark-cut {
+  position: absolute !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 3px !important;
+  background: #06131d !important;
+}
+
+.qv-original-mark .cut-one {
+  left: 15px !important;
+  top: 15px !important;
+}
+
+.qv-original-mark .cut-two {
+  left: 23px !important;
+  top: 23px !important;
+}
+
+/* QuanVerse text */
+.qv-original-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  transform: translateY(1px) !important;
+}
+
+.qv-original-text strong {
+  color: #ffffff !important;
+  font-size: 1.28rem !important;
+  line-height: 1 !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.045em !important;
+}
+
+.qv-original-text small {
+  margin-top: 7px !important;
+  color: #14e8ff !important;
+  font-size: 0.68rem !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.21em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+/* community badge */
+.qv-original-community {
+  height: 44px !important;
+  padding: 0 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  border-radius: 999px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.052), rgba(255,255,255,0.018)),
+    rgba(8,22,36,0.72) !important;
+  border: 1px solid rgba(20,232,255,0.20) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 14px 34px rgba(0,0,0,0.20) !important;
+  white-space: nowrap !important;
+}
+
+.qv-original-community > span:first-child {
+  color: #aeb8cc !important;
+  font-size: 0.84rem !important;
+  font-weight: 800 !important;
+}
+
+.qv-original-community strong {
+  color: #ffffff !important;
+  font-size: 0.86rem !important;
+  font-weight: 900 !important;
+}
+
+/* mini mark */
+.qs-original-mark {
+  width: 23px !important;
+  height: 23px !important;
+  position: relative !important;
+  display: inline-block !important;
+  flex: 0 0 23px !important;
+}
+
+.qs-original-mark span {
+  position: absolute !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 5px !important;
+}
+
+.qs-original-mark span:first-child {
+  top: 0 !important;
+  left: 0 !important;
+  background: linear-gradient(135deg, #b516ff, #6624ff) !important;
+  border-bottom-right-radius: 9px !important;
+}
+
+.qs-original-mark span:last-child {
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, #ffbc2f, #ff9d12) !important;
+  border-top-left-radius: 9px !important;
+}
+
+/* nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d5dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.065) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.17) !important;
+}
+
+/* keep hero smaller and clean */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(2.95rem, 4.35vw, 4.35rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.16rem, 1.52vw, 1.45rem) !important;
+  line-height: 1.58 !important;
+}
+
+@media (max-width: 1080px) {
+  .qv-original-community {
+    display: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 76px !important;
+  }
+
+  .qv-original-mark {
+    width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  .qv-original-mark .mark-blue,
+  .qv-original-mark .mark-gold {
+    width: 23px !important;
+    height: 23px !important;
+  }
+
+  .qv-original-mark .cut-one {
+    left: 13px !important;
+    top: 13px !important;
+  }
+
+  .qv-original-mark .cut-two {
+    left: 20px !important;
+    top: 20px !important;
+  }
+
+  .qv-original-text strong {
+    font-size: 1.08rem !important;
+  }
+
+  .qv-original-text small {
+    font-size: 0.57rem !important;
+    letter-spacing: 0.17em !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
