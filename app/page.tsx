@@ -206,10 +206,27 @@ export default function Home() {
 
       <header className="site-header">
         <div className="container nav-shell">
-          <div className="brand-zone logo-image-zone">
-            <a href="#top" className="brand brand-image" aria-label="QuanVerse - A Community by QuanSkill">
-              <img src="/quanskill-aiot.png" alt="QuanVerse - A Community by QuanSkill" />
+          <div className="native-brand-lockup">
+            <a href="#top" className="native-brand" aria-label="QuanVerse AIoT">
+              <span className="native-mark" aria-hidden="true">
+                <span className="native-mark-blue" />
+                <span className="native-mark-gold" />
+              </span>
+
+              <span className="native-brand-copy">
+                <strong>QuanVerse</strong>
+                <small>AIoT</small>
+              </span>
             </a>
+
+            <div className="native-community" aria-label="A Community by QuanSkill">
+              <span>A Community by</span>
+              <span className="native-mini-mark" aria-hidden="true">
+                <span />
+                <span />
+              </span>
+              <strong>QuanSkill</strong>
+            </div>
           </div>
 
           <nav className="nav-links">

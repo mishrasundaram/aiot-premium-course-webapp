@@ -1939,3 +1939,275 @@ button {
     line-height: 1.12 !important;
   }
 }
+
+/* =========================================================
+   FINAL HEADER LOGO FIX
+   No JPEG strip. No background rectangle.
+   Native QuanVerse + AIoT + QuanSkill logo.
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 80, 96, 0.30), transparent 38%),
+    linear-gradient(90deg, #061b24 0%, #050a13 44%, #050711 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.nav-shell {
+  min-height: 84px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* hide all old image/CSS logo attempts */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* New clean logo */
+.native-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  min-width: 0;
+}
+
+.native-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.native-mark {
+  width: 46px;
+  height: 46px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 12px 22px rgba(0,0,0,0.32));
+}
+
+.native-mark-blue,
+.native-mark-gold {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 9px;
+}
+
+.native-mark-blue {
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #a316ff 0%, #7a1fff 46%, #4b31ff 100%);
+  border-bottom-right-radius: 18px;
+}
+
+.native-mark-gold {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffc034 0%, #ff9d13 52%, #e18600 100%);
+  border-top-left-radius: 18px;
+}
+
+.native-mark::after {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  background: #06121d;
+  box-shadow: 10px 10px 0 #06121d;
+}
+
+.native-brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.native-brand-copy strong {
+  color: #ffffff;
+  font-size: 1.22rem;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+}
+
+.native-brand-copy small {
+  margin-top: 7px;
+  color: #16e8ff;
+  font-size: 0.95rem;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Community badge like reference */
+.native-community {
+  height: 46px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 999px;
+  color: #a9b6ca;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.052), rgba(255,255,255,0.02)),
+    rgba(8, 22, 36, 0.72);
+  border: 1px solid rgba(22,232,255,0.20);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 18px 42px rgba(0,0,0,0.20);
+  white-space: nowrap;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.native-community > span:first-child {
+  color: #a7b6cb;
+}
+
+.native-community strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.native-mini-mark {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.native-mini-mark span {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 6px;
+}
+
+.native-mini-mark span:first-child {
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #a316ff, #6427ff);
+  border-bottom-right-radius: 10px;
+}
+
+.native-mini-mark span:last-child {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffc034, #ff9d13);
+  border-top-left-radius: 10px;
+}
+
+/* Header nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d5dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.065) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.17) !important;
+}
+
+/* Keep hero title cleaner and smaller */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(2.95rem, 4.35vw, 4.35rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.16rem, 1.52vw, 1.45rem) !important;
+  line-height: 1.58 !important;
+}
+
+.hero {
+  padding-top: 46px !important;
+  padding-bottom: 60px !important;
+  gap: 46px !important;
+}
+
+/* Section spacing cleanup */
+.section {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.section-head {
+  margin-bottom: 28px !important;
+}
+
+@media (max-width: 1080px) {
+  .native-community {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 76px !important;
+  }
+
+  .native-brand-lockup {
+    gap: 14px;
+  }
+
+  .native-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .native-mark-blue,
+  .native-mark-gold {
+    width: 27px;
+    height: 27px;
+  }
+
+  .native-mark::after {
+    left: 15px;
+    top: 15px;
+    width: 9px;
+    height: 9px;
+    box-shadow: 9px 9px 0 #06121d;
+  }
+
+  .native-brand-copy strong {
+    font-size: 1.05rem;
+  }
+
+  .native-brand-copy small {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 10vw, 3.45rem) !important;
+    line-height: 1.13 !important;
+  }
+}
