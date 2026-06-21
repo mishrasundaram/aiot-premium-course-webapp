@@ -1,26 +1,13 @@
-<svg width="760" height="190" viewBox="0 0 760 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="760" height="190" fill="transparent"/>
-  <g transform="translate(20 34)">
-    <path d="M18 0H74C85.0457 0 94 8.9543 94 20V40H51C44.3726 40 39 45.3726 39 52V68H18C8.05888 68 0 59.9411 0 50V18C0 8.05887 8.05888 0 18 0Z" fill="#6D28D9"/>
-    <path d="M0 78H43C49.6274 78 55 72.6274 55 66V50H76C85.9411 50 94 58.0589 94 68V100C94 109.941 85.9411 118 76 118H18C8.05888 118 0 109.941 0 100V78Z" fill="#FF9F1C"/>
-    <rect x="55" y="40" width="22" height="22" rx="6" fill="#08111E"/>
-    <rect x="17" y="57" width="22" height="22" rx="6" fill="#08111E"/>
+<svg width="430" height="110" viewBox="0 0 430 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 12)">
+    <path d="M16 0H58C66.8 0 74 7.2 74 16V31H40C34.5 31 30 35.5 30 41V54H16C7.2 54 0 46.8 0 38V16C0 7.2 7.2 0 16 0Z" fill="#8A19FF"/>
+    <path d="M0 61H34C39.5 61 44 56.5 44 51V38H58C66.8 38 74 45.2 74 54V76C74 84.8 66.8 92 58 92H16C7.2 92 0 84.8 0 76V61Z" fill="#FF9D18"/>
+    <rect x="44" y="31" width="18" height="18" rx="5" fill="#07101C"/>
+    <rect x="14" y="44" width="18" height="18" rx="5" fill="#07101C"/>
   </g>
 
-  <g transform="translate(136 48)">
-    <text x="0" y="42" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="850" fill="#F8FBFF" letter-spacing="-2">QuanVerse</text>
-    <text x="0" y="82" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="950" fill="#18F0FF" letter-spacing="4.2">AIOT MASTERY</text>
-  </g>
-
-  <g transform="translate(508 57)">
-    <rect width="205" height="58" rx="29" fill="#0F1929" stroke="#1A3B5A"/>
-    <text x="24" y="36" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#9FB0C7">A Community by</text>
-    <g transform="translate(122 16) scale(.44)">
-      <path d="M18 0H74C85.0457 0 94 8.9543 94 20V40H51C44.3726 40 39 45.3726 39 52V68H18C8.05888 68 0 59.9411 0 50V18C0 8.05887 8.05888 0 18 0Z" fill="#6D28D9"/>
-      <path d="M0 78H43C49.6274 78 55 72.6274 55 66V50H76C85.9411 50 94 58.0589 94 68V100C94 109.941 85.9411 118 76 118H18C8.05888 118 0 109.941 0 100V78Z" fill="#FF9F1C"/>
-      <rect x="55" y="40" width="22" height="22" rx="6" fill="#08111E"/>
-      <rect x="17" y="57" width="22" height="22" rx="6" fill="#08111E"/>
-    </g>
-    <text x="168" y="36" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#F8FBFF">QS</text>
+  <g transform="translate(95 20)">
+    <text x="0" y="34" font-family="Inter, Arial, sans-serif" font-size="31" font-weight="850" fill="#F7FBFF" letter-spacing="-1.2">QuanVerse</text>
+    <text x="0" y="62" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="900" fill="#16F0FF" letter-spacing="3.2">AIOT MASTERY</text>
   </g>
 </svg>
