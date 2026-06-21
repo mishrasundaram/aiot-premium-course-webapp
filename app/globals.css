@@ -3083,3 +3083,261 @@ button {
     display: none !important;
   }
 }
+
+/* =========================================================
+   EXACT LOGO CORRECTION — MATCH LOWER REFERENCE
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 83, 90, 0.28), transparent 36%),
+    linear-gradient(90deg, #071d25 0%, #050c14 46%, #040712 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+}
+
+.nav-shell {
+  min-height: 80px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* kill every old logo attempt */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-original-lockup,
+.qv-original-brand,
+.qv-original-mark,
+.qv-original-text,
+.qv-original-community,
+.qv-lockup-link,
+.qv-lockup-link img,
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* full logo lockup */
+.brand-ref-lockup {
+  display: flex !important;
+  align-items: center !important;
+  gap: 26px !important;
+  min-width: 0 !important;
+}
+
+.brand-ref-main {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* main icon */
+.brand-ref-icon {
+  width: 37px !important;
+  height: 37px !important;
+  position: relative !important;
+  display: inline-block !important;
+  flex: 0 0 37px !important;
+}
+
+.brand-ref-purple,
+.brand-ref-orange {
+  position: absolute !important;
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 7px !important;
+}
+
+.brand-ref-purple {
+  left: 0 !important;
+  top: 0 !important;
+  background: linear-gradient(135deg, #b61cff 0%, #8c1fff 45%, #5b26ff 100%) !important;
+  border-bottom-right-radius: 14px !important;
+}
+
+.brand-ref-orange {
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, #ffbf34 0%, #ffa111 55%, #dd8600 100%) !important;
+  border-top-left-radius: 14px !important;
+}
+
+.brand-ref-cut {
+  position: absolute !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 3px !important;
+  background: #06121d !important;
+}
+
+.brand-ref-cut-one {
+  left: 14.5px !important;
+  top: 14.5px !important;
+}
+
+.brand-ref-cut-two {
+  left: 22.5px !important;
+  top: 22.5px !important;
+}
+
+/* QuanVerse text */
+.brand-ref-text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  transform: translateY(1px) !important;
+}
+
+.brand-ref-text strong {
+  color: #ffffff !important;
+  font-size: 1.18rem !important;
+  line-height: 1 !important;
+  font-weight: 850 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.brand-ref-text small {
+  margin-top: 7px !important;
+  color: #14e8ff !important;
+  font-size: 0.63rem !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.23em !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+}
+
+/* community pill — smaller like the lower screenshot */
+.brand-ref-community {
+  width: 244px !important;
+  height: 44px !important;
+  padding: 0 16px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.018)),
+    rgba(8, 22, 36, 0.72) !important;
+  border: 1px solid rgba(20,232,255,0.18) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 12px 28px rgba(0,0,0,0.18) !important;
+}
+
+.brand-ref-community > span:first-child {
+  color: #aeb8cc !important;
+  font-size: 0.82rem !important;
+  font-weight: 800 !important;
+}
+
+.brand-ref-community strong {
+  color: #ffffff !important;
+  font-size: 0.82rem !important;
+  font-weight: 900 !important;
+}
+
+/* mini icon */
+.brand-ref-miniicon {
+  position: relative !important;
+  width: 22px !important;
+  height: 22px !important;
+  display: inline-block !important;
+  flex: 0 0 22px !important;
+}
+
+.brand-ref-miniicon span {
+  position: absolute !important;
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 5px !important;
+}
+
+.mini-purple {
+  left: 0 !important;
+  top: 0 !important;
+  background: linear-gradient(135deg, #b61cff, #6726ff) !important;
+  border-bottom-right-radius: 9px !important;
+}
+
+.mini-orange {
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, #ffbf34, #ffa111) !important;
+  border-top-left-radius: 9px !important;
+}
+
+/* nav */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d6dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+@media (max-width: 1080px) {
+  .brand-ref-community {
+    display: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 74px !important;
+  }
+
+  .brand-ref-icon {
+    width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  .brand-ref-purple,
+  .brand-ref-orange {
+    width: 23px !important;
+    height: 23px !important;
+  }
+
+  .brand-ref-cut-one {
+    left: 13px !important;
+    top: 13px !important;
+  }
+
+  .brand-ref-cut-two {
+    left: 20px !important;
+    top: 20px !important;
+  }
+
+  .brand-ref-text strong {
+    font-size: 1.04rem !important;
+  }
+
+  .brand-ref-text small {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
