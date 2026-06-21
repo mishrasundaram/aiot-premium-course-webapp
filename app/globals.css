@@ -1221,3 +1221,94 @@ button {
     line-height: 1.04 !important;
   }
 }
+
+/* =========================================================
+   Real QuanVerse / QuanSkill Logo Image Fix
+   Uses public/quanskill.jpeg directly
+========================================================= */
+
+.logo-image-zone {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brand-image {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 0;
+}
+
+.brand-image img {
+  display: block;
+  width: 515px;
+  max-width: min(515px, 52vw);
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Make header cleaner with real logo */
+.nav-shell {
+  min-height: 86px;
+}
+
+.site-header {
+  background: rgba(5, 10, 19, 0.9);
+  backdrop-filter: blur(20px);
+}
+
+.nav-links {
+  gap: 24px;
+}
+
+/* Disable old CSS logo pieces if still present anywhere */
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* Keep hero text clean and non-overlapping */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(3.65rem, 5.6vw, 5.45rem) !important;
+  font-weight: 820 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  max-width: 710px;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.28rem, 1.85vw, 1.72rem) !important;
+  line-height: 1.48 !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Responsive logo */
+@media (max-width: 1080px) {
+  .brand-image img {
+    width: 430px;
+    max-width: 58vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 76px;
+  }
+
+  .brand-image img {
+    width: 260px;
+    max-width: 64vw;
+  }
+
+  .nav-links button {
+    min-width: 50px;
+    height: 42px;
+  }
+}
