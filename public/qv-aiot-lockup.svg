@@ -1,0 +1,28 @@
+<svg width="520" height="72" viewBox="0 0 520 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- QuanVerse mark -->
+  <g transform="translate(0 9)">
+    <path d="M10 0H35C40.52 0 45 4.48 45 10V22H27C23.13 22 20 25.13 20 29V39H10C4.48 39 0 34.52 0 29V10C0 4.48 4.48 0 10 0Z" fill="#A01BFF"/>
+    <path d="M0 43H18C21.87 43 25 39.87 25 36V27H35C40.52 27 45 31.48 45 37V52C45 57.52 40.52 62 35 62H10C4.48 62 0 57.52 0 52V43Z" fill="#FFAA18"/>
+    <rect x="24" y="22" width="11" height="11" rx="4" fill="#06121D"/>
+    <rect x="10" y="35" width="11" height="11" rx="4" fill="#06121D"/>
+  </g>
+
+  <!-- QuanVerse text -->
+  <g transform="translate(62 13)">
+    <text x="0" y="20" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="850" fill="#FFFFFF" letter-spacing="-0.6">QuanVerse</text>
+    <text x="0" y="44" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="950" fill="#16E8FF" letter-spacing="3.1">AIOT MASTERY</text>
+  </g>
+
+  <!-- Community badge -->
+  <g transform="translate(220 8)">
+    <rect x="0.5" y="0.5" width="278" height="55" rx="27.5" fill="#0B1828" fill-opacity="0.76" stroke="#174A69"/>
+    <text x="21" y="34" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#AEB8CC">A Community by</text>
+
+    <g transform="translate(155 16)">
+      <path d="M7 0H19C22.86 0 26 3.14 26 7V13H16C13.79 13 12 14.79 12 17V23H7C3.14 23 0 19.86 0 16V7C0 3.14 3.14 0 7 0Z" fill="#A01BFF"/>
+      <path d="M0 26H11C13.21 26 15 24.21 15 22V16H21C24.86 16 28 19.14 28 23V33C28 36.86 24.86 40 21 40H7C3.14 40 0 36.86 0 33V26Z" fill="#FFAA18"/>
+    </g>
+
+    <text x="193" y="34" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="900" fill="#FFFFFF" letter-spacing="-0.2">QuanSkill</text>
+  </g>
+</svg>

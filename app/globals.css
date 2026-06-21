@@ -2418,3 +2418,139 @@ button {
     letter-spacing: 0.16em !important;
   }
 }
+
+/* =========================================================
+   FINAL LOGO RESET
+   Uses one clean transparent SVG.
+   Removes all previous image/native logo attempts.
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 80, 96, 0.30), transparent 38%),
+    linear-gradient(90deg, #061b24 0%, #050a13 44%, #050711 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* Hide every previous logo implementation */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-symbol,
+.brand-copy,
+.community-badge {
+  display: none !important;
+}
+
+/* New clean logo */
+.qv-lockup-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+}
+
+.qv-lockup-link img {
+  display: block !important;
+  width: 520px !important;
+  max-width: min(520px, 54vw) !important;
+  height: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Header nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d5dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.065) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.17) !important;
+}
+
+/* Keep hero clean and smaller */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(2.95rem, 4.35vw, 4.35rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.16rem, 1.52vw, 1.45rem) !important;
+  line-height: 1.58 !important;
+}
+
+.hero {
+  padding-top: 46px !important;
+  padding-bottom: 60px !important;
+  gap: 46px !important;
+}
+
+/* Section spacing cleanup */
+.section {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.section-head {
+  margin-bottom: 28px !important;
+}
+
+@media (max-width: 1080px) {
+  .qv-lockup-link img {
+    width: 430px !important;
+    max-width: 58vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 76px !important;
+  }
+
+  .qv-lockup-link img {
+    width: 260px !important;
+    max-width: 68vw !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 10vw, 3.45rem) !important;
+    line-height: 1.13 !important;
+  }
+}
