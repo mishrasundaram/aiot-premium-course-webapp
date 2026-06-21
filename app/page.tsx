@@ -207,7 +207,7 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav-shell">
           <div className="brand-zone logo-image-zone">
-            <a href="#top" className="brand brand-image" aria-label="QuanVerse AIoT Mastery">
+            <a href="#top" className="brand brand-image" aria-label="QuanVerse - A Community by QuanSkill">
               <img src="/quanskill.jpeg" alt="QuanVerse - A Community by QuanSkill" />
             </a>
           </div>
