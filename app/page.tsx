@@ -341,6 +341,13 @@ export default function Home() {
               {t.secondary}
             </a>
           </div>
+
+          <div className="hero-proof-row">
+            <span>Sensor Streams</span>
+            <span>MQTT Pipeline</span>
+            <span>AI Inference</span>
+            <span>Edge Ready</span>
+          </div>
         </div>
 
         <aside className="program-dossier">
@@ -366,6 +373,20 @@ export default function Home() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+
+          <div className="dossier-flow" aria-label="AIoT learning flow">
+            <div>
+              <small>AIoT System Loop</small>
+              <strong>Sense → Stream → Engineer → Learn → Act</strong>
+            </div>
+            <div className="flow-dots">
+              <span />
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
         </aside>
       </section>
 

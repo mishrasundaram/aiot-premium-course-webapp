@@ -824,3 +824,335 @@ main {
     flex-direction: column;
   }
 }
+
+/* ================================
+   Premium AIoT refinement pass
+   Cleaner logo, tighter hero, unique AIoT detail
+================================ */
+
+/* reduce page clutter and fix empty top feeling */
+.site-header {
+  min-height: 92px;
+}
+
+.hero {
+  min-height: auto;
+  padding-top: 64px;
+  padding-bottom: 84px;
+  align-items: start;
+}
+
+/* cleaner QuanVerse logo treatment */
+.qv-brand {
+  gap: 24px;
+}
+
+.qv-main {
+  gap: 13px;
+}
+
+.qv-mark {
+  width: 46px;
+  height: 46px;
+  position: relative;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
+}
+
+.qv-mark-blue,
+.qv-mark-gold {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+}
+
+.qv-mark-blue {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #2c6bff 0%, #1748db 100%);
+  border-bottom-right-radius: 18px;
+}
+
+.qv-mark-gold {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffb327 0%, #e48800 100%);
+  border-top-left-radius: 18px;
+}
+
+.qv-mark::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 16px;
+  top: 16px;
+  border-radius: 4px;
+  background: #050711;
+  box-shadow: 13px 13px 0 #050711;
+}
+
+.qv-title {
+  font-size: 1.46rem;
+  letter-spacing: -0.045em;
+}
+
+.qv-subtitle {
+  color: var(--cyan);
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+}
+
+/* make community pill neat, not heavy */
+.qv-community {
+  height: 44px;
+  padding: 0 16px;
+  gap: 10px;
+  background: rgba(10, 23, 38, 0.64);
+  border-color: rgba(22, 232, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.qv-community > span:first-child {
+  color: #a7b5ca;
+  font-weight: 800;
+}
+
+.qv-mini-mark {
+  width: 24px;
+  height: 24px;
+}
+
+.qv-mini-mark span {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+}
+
+.qv-mini-mark span:first-child {
+  background: linear-gradient(135deg, #2c6bff, #1748db);
+}
+
+.qv-mini-mark span:last-child {
+  background: linear-gradient(135deg, #ffb327, #e48800);
+}
+
+/* header balance */
+.header-actions {
+  gap: 24px;
+}
+
+.nav {
+  gap: 26px;
+  font-size: 0.84rem;
+  letter-spacing: 0.13em;
+}
+
+.language-toggle {
+  min-width: 72px;
+  height: 50px;
+}
+
+/* hero typography balance */
+.hero-title {
+  max-width: 700px;
+  font-size: clamp(4.6rem, 7vw, 7.45rem);
+}
+
+.hero-subtitle {
+  max-width: 680px;
+  margin-top: 26px;
+}
+
+.hero-note {
+  max-width: 690px;
+  margin-top: 22px;
+}
+
+/* new AIoT proof row fills the empty lower-left space cleanly */
+.hero-proof-row {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 700px;
+}
+
+.hero-proof-row span {
+  padding: 10px 13px;
+  border-radius: 999px;
+  color: #dff8ff;
+  background: rgba(22, 232, 255, 0.065);
+  border: 1px solid rgba(22, 232, 255, 0.16);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+/* dossier: cleaner, less dirty, more expensive */
+.program-dossier {
+  margin-top: 10px;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(22,232,255,0.08), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.078), rgba(255,255,255,0.032)),
+    rgba(24, 24, 30, 0.94);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.dossier-title {
+  font-size: clamp(2.85rem, 4.35vw, 4.45rem);
+}
+
+.dossier-grid {
+  gap: 12px;
+}
+
+.dossier-stat {
+  min-height: 88px;
+  padding: 18px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(0,0,0,0.12));
+}
+
+.dossier-list li {
+  padding: 14px 0;
+}
+
+/* unique AIoT flow block */
+.dossier-flow {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(22,232,255,0.08), rgba(19,245,167,0.055)),
+    rgba(255,255,255,0.035);
+  border: 1px solid rgba(22,232,255,0.15);
+}
+
+.dossier-flow small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cyan);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dossier-flow strong {
+  display: block;
+  color: #f2fbff;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.flow-dots {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.flow-dots span {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--cyan), var(--green));
+  opacity: 0.82;
+}
+
+.flow-dots span:nth-child(2) { opacity: 0.68; }
+.flow-dots span:nth-child(3) { opacity: 0.54; }
+.flow-dots span:nth-child(4) { opacity: 0.68; }
+.flow-dots span:nth-child(5) { opacity: 0.9; }
+
+/* more premium strip */
+.strip {
+  background:
+    linear-gradient(90deg, rgba(22,232,255,0.045), rgba(255,255,255,0.025), rgba(19,245,167,0.035));
+}
+
+.strip-item {
+  padding: 22px 0;
+}
+
+/* section rhythm */
+.section {
+  padding: 86px 0;
+}
+
+.section-header {
+  gap: 48px;
+}
+
+/* cleaner cards */
+.pillar,
+.project-card,
+.faq-item,
+.outcome-card,
+.chapter-row,
+.arch-row {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.028));
+  border-color: rgba(255,255,255,0.105);
+}
+
+/* curriculum rows feel less crowded */
+.chapter-row {
+  padding: 22px;
+  grid-template-columns: 70px 0.52fr 1.06fr 0.76fr;
+}
+
+.chapter-week {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+}
+
+/* mobile logo/header fix */
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 78px;
+  }
+
+  .qv-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .qv-mark-blue,
+  .qv-mark-gold {
+    width: 28px;
+    height: 28px;
+  }
+
+  .qv-mark::after {
+    width: 11px;
+    height: 11px;
+    left: 14px;
+    top: 14px;
+    box-shadow: 11px 11px 0 #050711;
+  }
+
+  .qv-title {
+    font-size: 1.12rem;
+  }
+
+  .qv-subtitle {
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hero {
+    padding-top: 46px;
+  }
+
+  .hero-proof-row {
+    margin-top: 24px;
+  }
+
+  .program-dossier {
+    margin-top: 0;
+  }
+
+  .chapter-row {
+    grid-template-columns: 1fr;
+  }
+}
