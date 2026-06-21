@@ -3644,3 +3644,117 @@ button {
     max-width: 66vw !important;
   }
 }
+
+/* =========================================================
+   FINAL UPLOADED LOGO FIX
+   Uses real transparent logo: public/quan-header.png
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 82, 92, 0.28), transparent 36%),
+    linear-gradient(90deg, #071d25 0%, #050c14 46%, #040712 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* Hide all previous logo experiments */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-original-lockup,
+.qv-original-brand,
+.qv-original-mark,
+.qv-original-text,
+.qv-original-community,
+.qv-lockup-link,
+.qv-lockup-link img,
+.qv-symbol,
+.brand-copy,
+.community-badge,
+.brand-ref-lockup,
+.brand-ref-main,
+.brand-ref-icon,
+.brand-ref-text,
+.brand-ref-community,
+.real-logo-final,
+.real-logo-final img {
+  display: none !important;
+}
+
+/* Final uploaded logo */
+.uploaded-logo-lockup {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+  flex: 0 0 auto !important;
+}
+
+.uploaded-logo-lockup img {
+  display: block !important;
+  width: 520px !important;
+  max-width: min(520px, 54vw) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Header nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d6dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+@media (max-width: 1080px) {
+  .uploaded-logo-lockup img {
+    width: 430px !important;
+    max-width: 58vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 74px !important;
+  }
+
+  .uploaded-logo-lockup img {
+    width: 260px !important;
+    max-width: 68vw !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
