@@ -206,30 +206,9 @@ export default function Home() {
 
       <header className="site-header">
         <div className="container nav-shell">
-          <div className="brand-ref-lockup">
-            <a href="#top" className="brand-ref-main" aria-label="QuanVerse">
-              <span className="brand-ref-icon" aria-hidden="true">
-                <span className="brand-ref-purple"></span>
-                <span className="brand-ref-orange"></span>
-                <span className="brand-ref-cut brand-ref-cut-one"></span>
-                <span className="brand-ref-cut brand-ref-cut-two"></span>
-              </span>
-
-              <span className="brand-ref-text">
-                <strong>QuanVerse</strong>
-                <small>CYBERSECURITY MASTERY</small>
-              </span>
-            </a>
-
-            <div className="brand-ref-community" aria-label="A Community by QuanSkill">
-              <span>A Community by</span>
-              <span className="brand-ref-miniicon" aria-hidden="true">
-                <span className="mini-purple"></span>
-                <span className="mini-orange"></span>
-              </span>
-              <strong>QuanSkill</strong>
-            </div>
-          </div>
+          <a href="#top" className="real-logo-final" aria-label="QuanVerse - A Community by QuanSkill">
+            <img src="/quanskill-final.png" alt="QuanVerse - A Community by QuanSkill" />
+          </a>
 
           <nav className="nav-links">
             <a href="#overview">{t.nav[0]}</a>

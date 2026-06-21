@@ -3341,3 +3341,257 @@ button {
     display: none !important;
   }
 }
+
+/* =========================================================
+   FINAL REAL LOGO FIX
+   Uses cleaned transparent logo from original uploaded logo.
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 82, 92, 0.28), transparent 36%),
+    linear-gradient(90deg, #071d25 0%, #050c14 46%, #040712 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* kill every previous logo attempt */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-original-lockup,
+.qv-original-brand,
+.qv-original-mark,
+.qv-original-text,
+.qv-original-community,
+.qv-lockup-link,
+.qv-lockup-link img,
+.qv-symbol,
+.brand-copy,
+.community-badge,
+.brand-ref-lockup,
+.brand-ref-main,
+.brand-ref-icon,
+.brand-ref-text,
+.brand-ref-community {
+  display: none !important;
+}
+
+/* use final transparent original logo */
+.real-logo-final {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+  flex: 0 0 auto !important;
+}
+
+.real-logo-final img {
+  display: block !important;
+  width: 520px !important;
+  max-width: min(520px, 54vw) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d6dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+/* keep hero clean */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(2.95rem, 4.35vw, 4.35rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.16rem, 1.52vw, 1.45rem) !important;
+  line-height: 1.58 !important;
+}
+
+@media (max-width: 1080px) {
+  .real-logo-final img {
+    width: 430px !important;
+    max-width: 58vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 74px !important;
+  }
+
+  .real-logo-final img {
+    width: 260px !important;
+    max-width: 68vw !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   FINAL REAL LOGO FIX
+   Uses cleaned transparent logo from original uploaded logo.
+========================================================= */
+
+.site-header {
+  background:
+    radial-gradient(circle at 0% 50%, rgba(0, 82, 92, 0.28), transparent 36%),
+    linear-gradient(90deg, #071d25 0%, #050c14 46%, #040712 100%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.09) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+.nav-shell {
+  min-height: 82px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+/* kill every previous logo attempt */
+.logo-image-zone,
+.brand-image,
+.brand-image img,
+.native-brand-lockup,
+.native-brand,
+.native-mark,
+.native-brand-copy,
+.native-community,
+.qv-original-lockup,
+.qv-original-brand,
+.qv-original-mark,
+.qv-original-text,
+.qv-original-community,
+.qv-lockup-link,
+.qv-lockup-link img,
+.qv-symbol,
+.brand-copy,
+.community-badge,
+.brand-ref-lockup,
+.brand-ref-main,
+.brand-ref-icon,
+.brand-ref-text,
+.brand-ref-community {
+  display: none !important;
+}
+
+/* use final transparent original logo */
+.real-logo-final {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 0 !important;
+  text-decoration: none !important;
+  flex: 0 0 auto !important;
+}
+
+.real-logo-final img {
+  display: block !important;
+  width: 520px !important;
+  max-width: min(520px, 54vw) !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* nav balance */
+.nav-links {
+  gap: 26px !important;
+}
+
+.nav-links a {
+  color: #d6dceb !important;
+  font-size: 0.87rem !important;
+  font-weight: 850 !important;
+}
+
+.nav-links button {
+  min-width: 56px !important;
+  height: 46px !important;
+  background: rgba(255,255,255,0.06) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,0.16) !important;
+}
+
+/* keep hero clean */
+.hero h1 {
+  font-family: "Inter", system-ui, sans-serif !important;
+  font-size: clamp(2.95rem, 4.35vw, 4.35rem) !important;
+  font-weight: 620 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.022em !important;
+  max-width: 650px !important;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.16rem, 1.52vw, 1.45rem) !important;
+  line-height: 1.58 !important;
+}
+
+@media (max-width: 1080px) {
+  .real-logo-final img {
+    width: 430px !important;
+    max-width: 58vw !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 74px !important;
+  }
+
+  .real-logo-final img {
+    width: 260px !important;
+    max-width: 68vw !important;
+  }
+
+  .nav-links a {
+    display: none !important;
+  }
+}
