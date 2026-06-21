@@ -530,3 +530,423 @@ button {
     flex-direction: column;
   }
 }
+
+/* =========================================================
+   Phase 2 Premium Refinement
+   Logo fix + luxury UI polish + motion + AIoT signal flow
+========================================================= */
+
+.luxury-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(54px);
+  opacity: 0.34;
+  transform: translateZ(0);
+}
+
+.orb-one {
+  width: 420px;
+  height: 420px;
+  left: -180px;
+  top: 120px;
+  background: rgba(21, 232, 255, 0.25);
+  animation: luxuryFloat 12s ease-in-out infinite;
+}
+
+.orb-two {
+  width: 380px;
+  height: 380px;
+  right: -160px;
+  top: 90px;
+  background: rgba(37, 99, 235, 0.24);
+  animation: luxuryFloat 14s ease-in-out infinite reverse;
+}
+
+.orb-three {
+  width: 280px;
+  height: 280px;
+  right: 18%;
+  bottom: 10%;
+  background: rgba(18, 244, 168, 0.1);
+  animation: luxuryFloat 16s ease-in-out infinite;
+}
+
+@keyframes luxuryFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18px, -22px, 0) scale(1.04);
+  }
+}
+
+/* Header and logo rebuild */
+.nav-shell {
+  min-height: 88px;
+}
+
+.brand-zone {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-width: 0;
+}
+
+.brand-composite {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.qv-symbol {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.32));
+}
+
+.qv-symbol::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 18px;
+  top: 18px;
+  border-radius: 5px;
+  background: #06111d;
+  box-shadow: 14px 14px 0 #06111d;
+}
+
+.qv-blue,
+.qv-gold {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.qv-blue {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #3174ff 0%, #1854df 100%);
+  border-bottom-right-radius: 19px;
+}
+
+.qv-gold {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffb52c 0%, #e18a00 100%);
+  border-top-left-radius: 19px;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-copy strong {
+  color: #ffffff;
+  font-size: 1.24rem;
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+}
+
+.brand-copy small {
+  margin-top: 7px;
+  color: var(--cyan);
+  font-size: 0.8rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 900;
+}
+
+.community-badge {
+  min-height: 46px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.025)),
+    rgba(8, 21, 35, 0.76);
+  border: 1px solid rgba(21, 232, 255, 0.2);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    0 16px 38px rgba(0,0,0,0.18);
+  color: #9fb0c5;
+  font-size: 0.82rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.community-badge strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.qs-symbol {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+}
+
+.qs-symbol span {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 6px;
+}
+
+.qs-symbol span:first-child {
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, #3174ff, #1854df);
+  border-bottom-right-radius: 10px;
+}
+
+.qs-symbol span:last-child {
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ffb52c, #e18a00);
+  border-top-left-radius: 10px;
+}
+
+/* Hide the old SVG logo image rule impact if any remains */
+.brand img {
+  width: auto;
+}
+
+/* Hero phase 2 polish */
+.hero {
+  padding-top: 70px;
+  padding-bottom: 104px;
+}
+
+.hero h1 {
+  max-width: 760px;
+  text-wrap: balance;
+}
+
+.hero-subtitle {
+  text-wrap: balance;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(255,255,255,0.13);
+  background:
+    radial-gradient(circle at 18% 12%, rgba(21,232,255,0.11), transparent 30%),
+    radial-gradient(circle at 88% 100%, rgba(18,244,168,0.08), transparent 32%),
+    linear-gradient(180deg, rgba(255,255,255,0.082), rgba(255,255,255,0.032)),
+    rgba(13, 20, 32, 0.94);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.05) 40%, transparent 70%);
+  transform: translateX(-100%);
+  animation: panelSheen 7s ease-in-out infinite;
+}
+
+@keyframes panelSheen {
+  0%, 58%, 100% {
+    transform: translateX(-115%);
+  }
+  72% {
+    transform: translateX(115%);
+  }
+}
+
+.hero-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* AIoT signal flow block */
+.signal-flow {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.signal-flow div {
+  padding: 15px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(21,232,255,0.075), rgba(255,255,255,0.025));
+  border: 1px solid rgba(21,232,255,0.15);
+}
+
+.signal-flow span {
+  display: block;
+  color: var(--cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.signal-flow b {
+  display: block;
+  margin-top: 8px;
+  color: #f2f8ff;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+/* Premium card interaction */
+.studio-grid article,
+.project-grid article,
+.faq-grid article,
+.module-row,
+.hero-panel {
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.studio-grid article:hover,
+.project-grid article:hover,
+.faq-grid article:hover,
+.module-row:hover {
+  transform: translateY(-4px);
+  border-color: rgba(21, 232, 255, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
+  box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+}
+
+.module-row {
+  position: relative;
+  overflow: hidden;
+}
+
+.module-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--cyan), var(--green));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.module-row:hover::after {
+  opacity: 1;
+}
+
+/* Better section rhythm */
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-head h2,
+.final-section h2 {
+  text-wrap: balance;
+}
+
+.project-grid article small {
+  display: inline-flex;
+  margin-bottom: 22px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(21, 232, 255, 0.075);
+  border: 1px solid rgba(21, 232, 255, 0.14);
+}
+
+/* Premium CTA/footer */
+.final-section {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 88px 42px;
+  border-radius: 36px;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(21,232,255,0.12), transparent 32%),
+    radial-gradient(circle at 82% 70%, rgba(18,244,168,0.09), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.03));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: var(--shadow);
+}
+
+.footer {
+  padding-top: 36px;
+}
+
+/* Responsive refinements */
+@media (max-width: 1080px) {
+  .brand-zone {
+    gap: 18px;
+  }
+
+  .community-badge {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-copy strong {
+    font-size: 1.08rem;
+  }
+
+  .brand-copy small {
+    font-size: 0.62rem;
+    letter-spacing: 0.11em;
+  }
+
+  .qv-symbol {
+    width: 42px;
+    height: 42px;
+  }
+
+  .qv-blue,
+  .qv-gold {
+    width: 29px;
+    height: 29px;
+  }
+
+  .qv-symbol::after {
+    width: 12px;
+    height: 12px;
+    left: 15px;
+    top: 15px;
+    box-shadow: 12px 12px 0 #06111d;
+  }
+
+  .signal-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .final-section {
+    width: min(100% - 24px, var(--container));
+    padding: 58px 24px;
+  }
+}

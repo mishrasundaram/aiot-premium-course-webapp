@@ -198,11 +198,35 @@ export default function Home() {
 
   return (
     <main className="page">
+      <div className="luxury-background" aria-hidden="true">
+        <span className="orb orb-one" />
+        <span className="orb orb-two" />
+        <span className="orb orb-three" />
+      </div>
+
       <header className="site-header">
         <div className="container nav-shell">
-          <a href="#top" className="brand">
-            <img src="/quanverse-premium-logo.svg" alt="QuanVerse AIoT Mastery" />
-          </a>
+          <div className="brand-zone">
+            <a href="#top" className="brand brand-composite" aria-label="QuanVerse AIoT Mastery">
+              <span className="qv-symbol" aria-hidden="true">
+                <span className="qv-blue" />
+                <span className="qv-gold" />
+              </span>
+              <span className="brand-copy">
+                <strong>QuanVerse</strong>
+                <small>AIoT Intelligence Mastery</small>
+              </span>
+            </a>
+
+            <div className="community-badge" aria-label="A Community by QuanSkill">
+              <span>A Community by</span>
+              <span className="qs-symbol" aria-hidden="true">
+                <span />
+                <span />
+              </span>
+              <strong>QuanSkill</strong>
+            </div>
+          </div>
 
           <nav className="nav-links">
             <a href="#overview">{t.nav[0]}</a>
@@ -246,6 +270,21 @@ export default function Home() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+
+          <div className="signal-flow" aria-label="AIoT intelligence flow">
+            <div>
+              <span>Sense</span>
+              <b>Sensor data</b>
+            </div>
+            <div>
+              <span>Learn</span>
+              <b>AI models</b>
+            </div>
+            <div>
+              <span>Act</span>
+              <b>Smart response</b>
+            </div>
+          </div>
         </aside>
       </section>
 
